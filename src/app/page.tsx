@@ -82,43 +82,6 @@ export default function UnderConstructionPage() {
             </Button>
           </Link>
 
-          <Box mt={8}>
-            <Text fontSize="sm" mb={2} color="gray.300">
-              Follow us:
-            </Text>
-            <Box display="flex" justifyContent="center" gap={4}>
-              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <IconButton
-                  aria-label="Facebook"
-                  variant="ghost"
-                  colorScheme="blue"
-                  size="lg"
-                >
-                  <FaFacebook />
-                </IconButton>
-              </Link>
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <IconButton
-                  aria-label="Twitter"
-                  variant="ghost"
-                  colorScheme="blue"
-                  size="lg"
-                >
-                  <FaTwitter />
-                </IconButton>
-              </Link>
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <IconButton
-                  aria-label="Instagram"
-                  variant="ghost"
-                  colorScheme="blue"
-                  size="lg"
-                >
-                  <FaInstagram />
-                </IconButton>
-              </Link>
-            </Box>
-          </Box>
         </VStack>
       </Box>
     </Center>
