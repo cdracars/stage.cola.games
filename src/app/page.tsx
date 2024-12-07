@@ -1,101 +1,126 @@
-import Image from "next/image";
+/**
+ * @fileoverview
+ * This component renders a visually appealing "Under Construction" page for COLA Games.
+ * It uses Chakra UI and FontAwesome icons to create a clean, responsive layout.
+ * This version uses a black background and adjusts the layout for improved readability.
+ *
+ * Usage:
+ * 1. Ensure Chakra UI and react-icons are installed:
+ *    npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion react-icons
+ * 2. Import and render <UnderConstructionPage /> in your Next.js page.
+ *
+ * Why these changes?
+ * - Using a solid black background and carefully chosen text colors increases contrast.
+ * - A constrained max-width and spacing improves text readability and focus.
+ * - Using gray tones for secondary text provides visual hierarchy and depth.
+ *
+ * Example:
+ * ```jsx
+ * // In your Next.js page:
+ * import UnderConstructionPage from './UnderConstructionPage';
+ *
+ * export default function Home() {
+ *   return <UnderConstructionPage />;
+ * }
+ * ```
+ */
 
-export default function Home() {
+"use client";
+
+import {
+  Box,
+  Center,
+  VStack,
+  Heading,
+  Text,
+  Button,
+  IconButton,
+  Image,
+  Link
+} from "@chakra-ui/react";
+import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
+
+export default function UnderConstructionPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Center minH="100vh" bg="black" p={6}>
+      <Box
+        w="100%"
+        maxW="md"
+        mx="auto"
+        textAlign="center"
+        color="white"
+      >
+        <VStack textAlign="center" color="white">
+          {/* Placeholder logo; replace /logo.png when available */}
+          <Image
+            src="/logo.png"
+            alt="Insert Logo Here"
+            boxSize="120px"
+            mb={4}
+          />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <Heading fontSize="4xl" color="whiteAlpha.900" lineHeight="shorter">
+            COLA Games
+          </Heading>
+
+          <Text fontSize="lg" color="gray.300" lineHeight="tall">
+            Our gaming universe is getting a makeover! Stay tuned for the epic launch.
+          </Text>
+
+          <Text fontSize="sm" color="gray.400">
+            Estimated Launch: <strong>Mid December 2024</strong>
+          </Text>
+
+          <Link href="mailto:staff@cola.games" style={{ textDecoration: "none" }}>
+            <Button
+              colorScheme="blue"
+              size="lg"
+              mt={4}
+              borderRadius="full"
+            >
+              <FaEnvelope /> Contact Us
+            </Button>
+          </Link>
+
+          <Box mt={8}>
+            <Text fontSize="sm" mb={2} color="gray.300">
+              Follow us:
+            </Text>
+            <Box display="flex" justifyContent="center" gap={4}>
+              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <IconButton
+                  aria-label="Facebook"
+                  variant="ghost"
+                  colorScheme="blue"
+                  size="lg"
+                >
+                  <FaFacebook />
+                </IconButton>
+              </Link>
+              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <IconButton
+                  aria-label="Twitter"
+                  variant="ghost"
+                  colorScheme="blue"
+                  size="lg"
+                >
+                  <FaTwitter />
+                </IconButton>
+              </Link>
+              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <IconButton
+                  aria-label="Instagram"
+                  variant="ghost"
+                  colorScheme="blue"
+                  size="lg"
+                >
+                  <FaInstagram />
+                </IconButton>
+              </Link>
+            </Box>
+          </Box>
+        </VStack>
+      </Box>
+    </Center>
   );
 }
