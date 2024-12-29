@@ -34,11 +34,10 @@ import {
   Heading,
   Text,
   Button,
-  IconButton,
   Image,
   Link
 } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 export default function UnderConstructionPage() {
   return (
