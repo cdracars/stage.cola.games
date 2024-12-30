@@ -1,88 +1,66 @@
-/**
- * @fileoverview
- * This component renders a visually appealing "Under Construction" page for COLA Games.
- * It uses Chakra UI and FontAwesome icons to create a clean, responsive layout.
- * This version uses a black background and adjusts the layout for improved readability.
- *
- * Usage:
- * 1. Ensure Chakra UI and react-icons are installed:
- *    npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion react-icons
- * 2. Import and render <UnderConstructionPage /> in your Next.js page.
- *
- * Why these changes?
- * - Using a solid black background and carefully chosen text colors increases contrast.
- * - A constrained max-width and spacing improves text readability and focus.
- * - Using gray tones for secondary text provides visual hierarchy and depth.
- *
- * Example:
- * ```jsx
- * // In your Next.js page:
- * import UnderConstructionPage from './UnderConstructionPage';
- *
- * export default function Home() {
- *   return <UnderConstructionPage />;
- * }
- * ```
- */
+import { Image } from "@chakra-ui/react";
 
-"use client";
-
-import {
-  Box,
-  Center,
-  VStack,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Link
-} from "@chakra-ui/react";
-import { FaEnvelope } from "react-icons/fa";
-
-export default function UnderConstructionPage() {
+export default function HomePage() {
   return (
-    <Center minH="100vh" bg="black" p={6}>
-      <Box
-        w="100%"
-        maxW="md"
-        mx="auto"
-        textAlign="center"
-        color="white"
-      >
-        <VStack textAlign="center" color="white">
-          {/* Placeholder logo; replace /logo.png when available */}
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
+      <div className="w-full max-w-lg mx-auto text-center py-8 px-6 rounded-md shadow-lg bg-gray-800">
+        {/* Logo Section */}
+        <div className="mb-4">
           <Image
             src="/logo.png"
-            alt="Insert Logo Here"
-            boxSize="120px"
-            mb={4}
+            alt="COLA Games Logo"
+            className="w-32 h-32 mx-auto rounded-full"
           />
+        </div>
 
-          <Heading fontSize="4xl" color="whiteAlpha.900" lineHeight="shorter">
-            COLA Games
-          </Heading>
+        {/* Title */}
+        <h1 className="text-2xl md:text-4xl font-extrabold leading-tight">
+          Welcome to COLA Games
+        </h1>
 
-          <Text fontSize="lg" color="gray.300" lineHeight="tall">
-            Our gaming universe is getting a makeover! Stay tuned for the epic launch.
-          </Text>
+        {/* Subtext */}
+        <p className="mt-4 text-gray-300 text-base md:text-lg">
+          Our gaming universe is getting a makeover! Stay tuned for the epic
+          launch.
+        </p>
 
-          <Text fontSize="sm" color="gray.400">
-            Estimated Launch: <strong>Mid December 2024</strong>
-          </Text>
+        {/* Launch Date */}
+        <p className="mt-2 text-sm text-gray-400">
+          Estimated Launch: <strong>Mid December 2024</strong>
+        </p>
 
-          <Link href="mailto:staff@cola.games" style={{ textDecoration: "none" }}>
-            <Button
-              colorScheme="blue"
-              size="lg"
-              mt={4}
-              borderRadius="full"
-            >
-              <FaEnvelope /> Contact Us
-            </Button>
-          </Link>
-
-        </VStack>
-      </Box>
-    </Center>
+        {/* Call-to-Actions */}
+        <div className="mt-6 flex flex-col md:flex-row gap-4 justify-center">
+          <a
+            href="mailto:staff@cola.games"
+            className="inline-block text-center bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-full shadow-lg transition"
+          >
+            <span className="flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M16 12H8m4 0V8m0 4v4m0-6h.01M4 6h16M4 18h16M4 6v12m16-12v12"
+                />
+              </svg>
+              Contact Us
+            </span>
+          </a>
+          <a
+            href="/events"
+            className="inline-block text-center bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-full shadow-lg transition"
+          >
+            View Events
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }

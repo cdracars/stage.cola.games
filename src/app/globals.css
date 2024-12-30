@@ -2,20 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --timeline-marker-size: 1.5rem;
+  --accent: #85200c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --timeline-marker-size: 1.5rem;
+    --accent: #85200c;
+  }
+}
+
+@layer utilities {
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-accent {
+    color: var(--accent);
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground font-sans antialiased;
+}
+
+/* Timeline-specific styles */
+.timeline-marker {
+  @apply rounded-full;
+  width: var(--timeline-marker-size);
+  height: var(--timeline-marker-size);
+  background-color: var(--brand-color);
+  border: 2px solid var(--foreground);
+}
+
+.timeline-line {
+  @apply border-l;
+  border-color: var(--foreground);
 }
