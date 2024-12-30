@@ -8,8 +8,9 @@ export default function HomePage() {
         <div className="mb-4">
           <Image
             src="/logo.png"
-            alt="COLA Games Logo"
-            className="w-32 h-32 mx-auto rounded-full"
+            alt="Insert Logo Here"
+            boxSize="120px"
+            mb={4}
           />
         </div>
 

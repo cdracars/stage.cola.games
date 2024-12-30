@@ -21,6 +21,7 @@ interface WebpackConfig {
 
 interface NextConfig {
   output: string;
+  basePath: string;
   assetPrefix: string;
   trailingSlash: boolean;
   images: {
@@ -31,6 +32,7 @@ interface NextConfig {
 
 const nextConfig: NextConfig = {
   output: "export", // Required for GitHub Pages static export
+  basePath: isProd ? "/stage.cola.games" : "",
   assetPrefix: isProd ? "/stage.cola.games/" : "",
   trailingSlash: true, // Ensure all routes end with a slash
   images: {
