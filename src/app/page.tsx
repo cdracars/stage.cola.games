@@ -37,7 +37,7 @@ export default function HomePage() {
           >
             <span className="flex items-center justify-center">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns="https://www.w3.org/2000/svg"
                 className="w-5 h-5 mr-2"
                 fill="none"
                 viewBox="0 0 24 24"
