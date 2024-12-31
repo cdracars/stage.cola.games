@@ -43,7 +43,7 @@ const nextConfig: NextConfig = {
     config.cache = {
       type: "filesystem",
       buildDependencies: {
-        config: [path.resolve(__dirname, "next.config.mjs")], // Absolute path to config
+        config: [path.resolve(__dirname, "next.config.ts")], // Absolute path to config
       },
       cacheLocation: path.resolve(process.cwd(), "node_modules/.cache/webpack"),
     };
@@ -62,3 +62,4 @@ const nextConfig: NextConfig = {
 };
 
 module.exports = nextConfig;
+

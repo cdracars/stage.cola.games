@@ -1,5 +1,6 @@
 "use client";
 
+import { getImagePath } from "@/app/utils/getImagePath";
 import {
   Box,
   Flex,
@@ -87,7 +88,7 @@ const Hero = () => {
         {/* Image Section */}
         <Box maxW={{ base: "full", lg: "50%" }} textAlign="center">
           <Image
-            src={`${process.env.NEXT_PUBLIC_ASSET_PREFIX || ""}/hero-image.svg`}
+            src={getImagePath("/hero-image.svg")}
             alt="Hero Image"
             className="object-cover mx-auto"
             boxSize={{ base: "300px", md: "400px", lg: "500px" }} // Responsive sizing

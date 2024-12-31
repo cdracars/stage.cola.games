@@ -1,5 +1,6 @@
 "use client";
 
+import { getImagePath } from "@/app/utils/getImagePath";
 import {
   Box,
   Flex,
@@ -34,7 +35,7 @@ const Header = () => {
         {/* Logo */}
         <HStack className="space-x-2">
           <Image
-            src={`${process.env.NEXT_PUBLIC_ASSET_PREFIX || ""}/logo.png`}
+            src={getImagePath("/logo.png")}
             alt="COLA Games Logo"
             boxSize="40px"
             objectFit="contain"
