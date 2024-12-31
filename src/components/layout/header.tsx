@@ -21,7 +21,7 @@ const Header = () => {
     { name: "Reawakening", href: "/reawakening" },
     { name: "Events", href: "/events" },
   ];
-  console.log("Menu open state:", open);
+
   return (
     <Box bg="gray.900" color="white" px={4} shadow="md">
       <Flex
@@ -65,9 +65,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <IconButton
           aria-label="Open Menu"
-          // className="md:hidden"
           onClick={() => {
-            console.log("Button clicked!");
             onToggle();
           }}
           variant="outline"
