@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
-import NavigationBar from "@/components/layout/navigation-bar";
 import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 
 import {
   Della_Respira,
@@ -51,8 +51,8 @@ export default function RootLayout({
         className={`${dellaRespira.variable} ${imFellEnglishSC.variable} ${marcellusSC.variable} ${laBelleAurore.variable} antialiased flex flex-col min-h-screen bg-gray-900 text-gray-100`}
       >
         <Provider>
-          {/* Navigation Bar */}
-          <NavigationBar />
+          {/* Header */}
+          <Header />
 
           {/* Main Content */}
           <main className="flex-grow container mx-auto px-6 py-12 bg-gray-900 text-gray-100 min-h-full">

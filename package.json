@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -d out -t true",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "2.2.4",
     "@chakra-ui/react": "^3.2.3",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
