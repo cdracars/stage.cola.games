@@ -1,4 +1,4 @@
-import { getFullPath } from "@/app/utils/getBasePath";
+import { getFullPath } from "@/utils/getBasePath";
 import {
   Image as ChakraImage,
   ImageProps as ChakraImageProps,

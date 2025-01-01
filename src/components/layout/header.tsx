@@ -9,8 +9,8 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Link from "next/link";
-import Image from "../overrides/Image";
+import Link from "@/components/overrides/link";
+import Image from "@/components/overrides/image";
 
 const Header = () => {
   const { open, onToggle } = useDisclosure();
@@ -23,7 +23,7 @@ const Header = () => {
   ];
 
   return (
-    <Box bg="gray.900" color="white" px={4} shadow="md">
+    <Box bg="gray.800" color="white" px={4} shadow="md">
       <Flex
         h={16}
         alignItems="center"
@@ -51,7 +51,12 @@ const Header = () => {
           display={{ base: "none", md: "flex" }}
         >
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href}>
+            <Link
+              key={link.name}
+              href={link.href}
+              _hover={{ color: "brand.500" }}
+              fontWeight="medium"
+            >
               {link.name}
             </Link>
           ))}
@@ -76,7 +81,12 @@ const Header = () => {
         <Box pb={4} display={{ md: "none" }}>
           <Stack as="nav" className="space-x-4">
             {navLinks.map((link) => (
-              <Link key={link.name} href={link.href}>
+              <Link
+                key={link.name}
+                href={link.href}
+                _hover={{ color: "brand.500" }}
+                fontWeight="medium"
+              >
                 {link.name}
               </Link>
             ))}

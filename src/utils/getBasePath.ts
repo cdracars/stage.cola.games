@@ -1,5 +1,5 @@
 export function getBasePath(): string {
-    return process.env.NEXT_PUBLIC_BASE_PATH || ""; // Ensure you use NEXT_PUBLIC_BASE_PATH
+    return process.env.NODE_ENV === 'production' ? "/stage.cola.games" : "";
 }
 
 export function getFullPath(path: string): string {
