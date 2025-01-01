@@ -1,16 +1,8 @@
 "use client";
 
-import { getImagePath } from "@/app/utils/getImagePath";
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button, Stack } from "@chakra-ui/react";
 import Link from "next/link";
+import Image from "@/components/overrides/Image";
 
 const Hero = () => {
   return (
@@ -88,7 +80,7 @@ const Hero = () => {
         {/* Image Section */}
         <Box maxW={{ base: "full", lg: "50%" }} textAlign="center">
           <Image
-            src={getImagePath("/hero-image.svg")}
+            src="/hero-image.svg"
             alt="Hero Image"
             className="object-cover mx-auto"
             boxSize={{ base: "300px", md: "400px", lg: "500px" }} // Responsive sizing

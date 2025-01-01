@@ -1,17 +1,16 @@
 "use client";
 
-import { getImagePath } from "@/app/utils/getImagePath";
 import {
   Box,
   Flex,
   HStack,
-  Link,
   IconButton,
   useDisclosure,
   Stack,
-  Image,
 } from "@chakra-ui/react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
+import Image from "../overrides/Image";
 
 const Header = () => {
   const { open, onToggle } = useDisclosure();
@@ -35,7 +34,7 @@ const Header = () => {
         {/* Logo */}
         <HStack className="space-x-2">
           <Image
-            src={getImagePath("/logo.png")}
+            src="/logo.png"
             alt="COLA Games Logo"
             boxSize="40px"
             objectFit="contain"
@@ -52,12 +51,7 @@ const Header = () => {
           display={{ base: "none", md: "flex" }}
         >
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              _hover={{ color: "brand.500" }}
-              fontWeight="medium"
-            >
+            <Link key={link.name} href={link.href}>
               {link.name}
             </Link>
           ))}
@@ -82,12 +76,7 @@ const Header = () => {
         <Box pb={4} display={{ md: "none" }}>
           <Stack as="nav" className="space-x-4">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                _hover={{ color: "brand.500" }}
-                fontWeight="medium"
-              >
+              <Link key={link.name} href={link.href}>
                 {link.name}
               </Link>
             ))}
