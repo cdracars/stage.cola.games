@@ -1,15 +1,9 @@
-import path from "path";
-
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 
 interface WebpackConfig {
   cache: {
     type: string;
-    buildDependencies: {
-      config: string[];
-    };
-    cacheLocation: string;
   };
   ignoreWarnings: {
     message: RegExp;
@@ -41,11 +35,7 @@ const nextConfig: NextConfig = {
   webpack: (config) => {
     // Enable filesystem caching with absolute cache location
     config.cache = {
-      type: "filesystem",
-      buildDependencies: {
-        config: [path.resolve(__dirname, "next.config.ts")], // Absolute path to config
-      },
-      cacheLocation: path.resolve(process.cwd(), "node_modules/.cache/webpack"),
+      type: "memory",
     };
 
     // Suppress caching-related warnings

@@ -9,7 +9,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Link from "@/components/overrides/link";
+import Link from "next/link";
 import Image from "@/components/overrides/image";
 
 const Header = () => {
@@ -23,39 +23,25 @@ const Header = () => {
   ];
 
   return (
-    <Box bg="gray.800" color="white" px={4} shadow="md">
-      <Flex
-        h={16}
-        alignItems="center"
-        justifyContent="space-between"
-        maxW="1200px"
-        mx="auto"
-      >
+    <Box className="bg-gray-800 text-white shadow-md px-4 font-della">
+      <Flex className="h-16 items-center justify-between max-w-screen-xl mx-auto">
         {/* Logo */}
         <HStack className="space-x-2">
           <Image
             src="/logo.png"
             alt="COLA Games Logo"
-            boxSize="40px"
-            objectFit="contain"
+            className="h-10 w-10 object-contain"
           />
-          <Box fontSize="xl" fontWeight="bold" color="brand.500">
-            COLA Games
-          </Box>
+          <Box className="text-xl font-bold text-inherit">COLA Games</Box>
         </HStack>
 
         {/* Desktop Navigation */}
-        <HStack
-          as="nav"
-          className="space-x-8"
-          display={{ base: "none", md: "flex" }}
-        >
+        <HStack as="nav" className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              _hover={{ color: "brand.500" }}
-              fontWeight="medium"
+              className="font-medium hover:text-brand-500 transition-colors"
             >
               {link.name}
             </Link>
@@ -65,12 +51,8 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <IconButton
           aria-label="Open Menu"
-          onClick={() => {
-            onToggle();
-          }}
-          variant="outline"
-          colorScheme="brand"
-          display={{ md: "none" }}
+          onClick={onToggle}
+          className="md:hidden border border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white"
         >
           {open ? <FaTimes /> : <FaBars />}
         </IconButton>
@@ -78,14 +60,13 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {open && (
-        <Box pb={4} display={{ md: "none" }}>
-          <Stack as="nav" className="space-x-4">
+        <Box className="pb-4 md:hidden">
+          <Stack as="nav" className="space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                _hover={{ color: "brand.500" }}
-                fontWeight="medium"
+                className="font-medium hover:text-brand-500 transition-colors"
               >
                 {link.name}
               </Link>

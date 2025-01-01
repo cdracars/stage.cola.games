@@ -1,19 +1,12 @@
 "use client";
 
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button, Stack } from "@chakra-ui/react";
+import Image from "@/components/overrides/image";
 import Link from "next/link";
 
 const Hero = () => {
   return (
-    <Box bg="background" color="accent" py={16} px={8}>
+    <Box bg="background" color="accent" py={16} px={8} className="mb-14">
       <Flex
         maxW="7xl"
         mx="auto"
@@ -23,7 +16,7 @@ const Hero = () => {
         className="space-y-8 lg:space-y-0"
       >
         {/* Text Section */}
-        <Box maxW={{ base: "full", lg: "50%" }}>
+        <Box maxW={{ base: "full", lg: "50%" }} className="pr-5">
           <Heading
             as="h1"
             size="2xl"
@@ -43,24 +36,10 @@ const Hero = () => {
             direction={{ base: "column", sm: "row" }}
           >
             <Link href="/events" passHref>
-              <Button
-                as="a"
-                colorScheme="brand"
-                bg="brand.500"
-                _hover={{ bg: "brand.600" }}
-              >
-                View Events
-              </Button>
+              <Button className="button-primary">View Events</Button>
             </Link>
             <Link href="/about-us" passHref>
-              <Button
-                as="a"
-                colorScheme="gray"
-                variant="outline"
-                _hover={{ bg: "brand.100" }}
-              >
-                Learn More
-              </Button>
+              <Button className="button-secondary">Learn More</Button>
             </Link>
           </Stack>
         </Box>
