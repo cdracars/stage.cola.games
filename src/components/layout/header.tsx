@@ -18,12 +18,12 @@ const Header = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
-    { name: "Reawakening", href: "/reawakening/how-to-play" },
+    { name: "Reawakening", href: "/reawakening" },
     { name: "Events", href: "/events" },
   ];
 
   return (
-    <Box className="bg-gray-800 text-white shadow-md px-4 font-della">
+    <Box className="bg-gray-800 text-white shadow-md px-4 font-della border-b border-gray-700">
       <Flex className="h-16 items-center justify-between max-w-screen-xl mx-auto">
         {/* Logo */}
         <HStack className="space-x-2">
@@ -36,12 +36,16 @@ const Header = () => {
         </HStack>
 
         {/* Desktop Navigation */}
-        <HStack as="nav" className="hidden md:flex space-x-8">
+        <HStack
+          as="nav"
+          className="space-x-8 text-lg font-medium"
+          display={{ base: "none", md: "flex" }}
+        >
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="font-medium hover:text-brand-500 transition-colors"
+              className="hover:text-brand-500 transition-colors"
             >
               {link.name}
             </Link>

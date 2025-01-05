@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define CSS Variables */
+:root {
+  --background: #171717;
+  --foreground: #ededed;
+  --timeline-marker-size: 1.5rem;
+  --accent: #85200c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171717;
+    --foreground: #ededed;
+    --timeline-marker-size: 1.5rem;
+    --accent: #85200c;
+  }
+}
+
+@layer utilities {
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-accent {
+    color: var(--accent);
+  }
+}
+
+@layer base {
+  ul ul {
+    list-style-type: revert;
+  }
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+}
+
+/* Timeline-specific styles */
+.timeline-marker {
+  @apply rounded-full;
+  width: var(--timeline-marker-size);
+  height: var(--timeline-marker-size);
+  background-color: var(--brand-color);
+  border: 2px solid var(--foreground);
+}
+
+.timeline-line {
+  @apply border-l;
+  border-color: var(--foreground);
+}
+
+@layer components {
+  .button-primary {
+    @apply border bg-brand-500 hover:bg-inherit hover:border hover:border-brand-500 hover:text-brand-500 text-white font-semibold py-2 px-6 rounded transition duration-300;
+  }
+
+  .button-secondary {
+    @apply border border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white font-semibold py-2 px-6 rounded transition duration-300;
+  }
+}
+
+.bg-texture {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    /* Overlay gradient for contrast */ url("/images/texture.svg"); /* Texture image */
+  background-size: 50px 50px; /* Scaled-down texture for subtlety */
+  background-repeat: repeat; /* Repeat pattern for consistency */
+  background-position: center; /* Ensures even alignment */
+  background-attachment: fixed; /* Keeps the background static during scrolling */
+}
+
+.section-heading {
+  @apply text-3xl font-cinzel text-brand-500 mb-6;
+}
+
+.subheading {
+  @apply text-xl font-della font-bold text-brand-400 mb-2;
+}
+
+.subheading-alt {
+  @apply text-xl font-cinzel font-bold text-brand-500 mb-2;
+}
+
+.subheading-alt-2 {
+  @apply font-della text-brand-500 mb-2;
+}
+
+.card-image {
+  @apply w-full h-auto mb-8 rounded-md shadow-lg;
+}
+
+.page-section {
+  @apply py-4 px-8 font-marcellus;
+}
+
+.page-section-alt {
+  @apply py-4 px-8 bg-gray-800 rounded-lg font-marcellus;
+}
+
+.hero-image {
+  @apply absolute inset-0 w-full h-full object-cover;
+}
+
+.text-link {
+  @apply bg-brand-500 text-white px-6 py-3 rounded-md hover:bg-brand-600 transition-colors font-della;
+}
+
+.bottom-border {
+  @apply border-b border-gray-500;
+}

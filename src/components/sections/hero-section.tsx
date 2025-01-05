@@ -1,58 +1,51 @@
 "use client";
 
-import { Box, Flex, Heading, Text, Button, Stack } from "@chakra-ui/react";
+import { Box, Heading, Text, Button, VStack } from "@chakra-ui/react";
 import Image from "@/components/overrides/image";
 import Link from "next/link";
 
 const Hero = () => {
   return (
-    <Box bg="background" color="accent" py={16} px={8} className="mb-14">
-      <Flex
-        maxW="7xl"
-        mx="auto"
-        align="center"
-        justify="space-between"
-        direction={{ base: "column", lg: "row" }}
-        className="space-y-8 lg:space-y-0"
-      >
-        {/* Text Section */}
-        <Box maxW={{ base: "full", lg: "50%" }} className="pr-5">
-          <Heading
-            as="h1"
-            size="2xl"
-            fontWeight="bold"
-            lineHeight="short"
-            className="text-brand mb-4"
-          >
-            Welcome to COLA Games
-          </Heading>
-          <Text fontSize="lg" className="mb-8 text-textPrimary">
-            Experience immersive live-action role-playing events. Create your
-            character, step into thrilling stories, and bring the COLA universe
-            to life!
-          </Text>
-          <Stack
-            className="space-x-4"
-            direction={{ base: "column", sm: "row" }}
-          >
-            <Link href="/events" passHref>
-              <Button className="button-primary">View Events</Button>
-            </Link>
-            <Link href="/about-us" passHref>
-              <Button className="button-secondary">Learn More</Button>
-            </Link>
-          </Stack>
-        </Box>
+    <Box className="border-b-2 border-gray-700 relative w-full h-[60vh] md:h-[80vh]">
+      {/* Background Image */}
+      <Box className="absolute inset-0">
+        <Image
+          src="/images/hero.svg" // Replace with your image path
+          alt="Hero Background"
+          objectFit="cover"
+          className="w-full h-full"
+        />
+      </Box>
 
-        {/* Image Section */}
-        <Box maxW={{ base: "full", lg: "50%" }} textAlign="center">
-          <Image
-            src="/hero-image.svg"
-            alt="Hero Image"
-            className="object-contain"
-          />
+      {/* Content Overlay */}
+      <VStack className="absolute inset-0 flex items-center justify-center text-center px-4 bg-black/50 space-x-4">
+        <Heading
+          as="h1"
+          className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg"
+        >
+          Welcome to COLA Games
+        </Heading>
+        <Text className="text-white text-lg md:text-xl drop-shadow-md">
+          Experience immersive live-action role-playing events. Create your
+          character, step into thrilling stories, and bring the COLA universe to
+          life!
+        </Text>
+        <Box className="flex flex-wrap justify-center gap-4">
+          <Link href="/events" passHref>
+            <Button className="border border-gray-700 bg-brand-500 hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
+              View Events
+            </Button>
+          </Link>
+          <Link href="/about-us" passHref>
+            <Button
+              variant="outline"
+              className="border border-gray-700 bg-brand-700 text-white text-lg font-semibold py-2 px-6 rounded hover:bg-brand-500 hover:text-white transition"
+            >
+              Learn More
+            </Button>
+          </Link>
         </Box>
-      </Flex>
+      </VStack>
     </Box>
   );
 };
