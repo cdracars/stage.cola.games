@@ -11,9 +11,19 @@ import {
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import Image from "@/components/overrides/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const { open, onToggle } = useDisclosure();
+  const pathname = usePathname();
+
+  // Check if the current path starts with "/reawakening"
+  const isReawakeningPath = pathname.startsWith("/reawakening");
+  const classes = `${
+    isReawakeningPath
+      ? "bg-gray-800 text-gray-100 bottom-border"
+      : "bg-primary-blue text-white"
+  }`;
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -23,7 +33,7 @@ const Header = () => {
   ];
 
   return (
-    <Box className="bg-gray-800 text-white shadow-md px-4 font-della border-b border-gray-700">
+    <Box className={`${classes} px-4 font-della`}>
       <Flex className="h-16 items-center justify-between max-w-screen-xl mx-auto">
         {/* Logo */}
         <HStack className="space-x-2">
@@ -32,7 +42,9 @@ const Header = () => {
             alt="COLA Games Logo"
             className="h-10 w-10 object-contain"
           />
-          <Box className="text-xl font-bold text-inherit">COLA Games</Box>
+          <Box className="text-xl font-bold text-primary-orange">
+            COLA Games
+          </Box>
         </HStack>
 
         {/* Desktop Navigation */}
@@ -45,7 +57,8 @@ const Header = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="hover:text-brand-500 transition-colors"
+              // className="hover:text-brand-500 transition-colors"
+              className="hover:text-primary-orange transition-colors duration-200"
             >
               {link.name}
             </Link>
@@ -56,7 +69,7 @@ const Header = () => {
         <IconButton
           aria-label="Open Menu"
           onClick={onToggle}
-          className="md:hidden border border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white"
+          className="md:hidden border border-brand-500 text-white hover:bg-brand-500 hover:text-white"
         >
           {open ? <FaTimes /> : <FaBars />}
         </IconButton>

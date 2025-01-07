@@ -29,8 +29,26 @@ module.exports = {
         },
         gray: colors.neutral,
         background: "#161616",
-        accent: "#efefef",
         textPrimary: "#b7b7b7",
+        primary: {
+          DEFAULT: '#E94E1B', // Bright red/orange for CTAs
+          blue: '#2a6baa',
+          orange: '#d97027'
+        },
+        secondary: {
+          green: '#2EB67D',
+          purple: '#9A6DC1',
+          blue: '#93c5fd',
+        },
+        neutral: {
+          light: '#F7F7F7',
+          dark: '#1B1B1B',
+        },
+        accent: {
+          orange: '#FF8C42',
+          red: '#D72638',
+          vampire: '#efefef'
+        },
       },
       fontFamily: {
         belle: ['"La Belle Aurore"', "cursive"],

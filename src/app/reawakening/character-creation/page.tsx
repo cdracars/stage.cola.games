@@ -535,7 +535,10 @@ export default function CharacterCreationPage() {
         </Text>
         <Text className="mb-4">
           You can take a look at the rules for character advancement here -{" "}
-          <Link href="/advancement" className="text-accent">
+          <Link
+            href="/reawakening/character-advancement"
+            className="text-accent"
+          >
             Character Advancement
           </Link>
           .

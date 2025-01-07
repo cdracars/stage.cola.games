@@ -87,6 +87,12 @@ export default function ReawakeningPage() {
                 "Learn how to create your character and start your journey.",
             },
             {
+              label: "Character Advancement",
+              href: "/reawakening/character-advancement",
+              description:
+                "Discover how to advance your character and unlock new abilities.",
+            },
+            {
               label: "Supporting Cast",
               href: "/reawakening/supporting-cast",
               description: "Meet the important NPCs in the chronicle.",

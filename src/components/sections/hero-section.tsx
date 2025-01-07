@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Background Image */}
       <Box className="absolute inset-0">
         <Image
-          src="/images/hero.svg" // Replace with your image path
+          src="/images/soda-bottle.jpg" // Replace with your image path
           alt="Hero Background"
           objectFit="cover"
           className="w-full h-full"
@@ -32,14 +32,14 @@ const Hero = () => {
         </Text>
         <Box className="flex flex-wrap justify-center gap-4">
           <Link href="/events" passHref>
-            <Button className="border border-gray-700 bg-brand-500 hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
+            <Button className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
               View Events
             </Button>
           </Link>
           <Link href="/about-us" passHref>
             <Button
               variant="outline"
-              className="border border-gray-700 bg-brand-700 text-white text-lg font-semibold py-2 px-6 rounded hover:bg-brand-500 hover:text-white transition"
+              className="border border-gray-700 bg-primary-orange text-white text-lg font-semibold py-2 px-6 rounded hover:bg-brand-500 hover:text-white transition"
             >
               Learn More
             </Button>

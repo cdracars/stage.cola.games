@@ -46,7 +46,7 @@ const features = [
 
 const FeatureSection = () => {
   return (
-    <Box className="py-16 px-8 bg-gray-800">
+    <Box className="py-16 px-8 bg-secondary-blue">
       <SimpleGrid
         columns={{ base: 1, md: 2, lg: 3 }}
         className="items-stretch space-x-8"
