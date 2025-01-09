@@ -23,7 +23,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         as="div"
         className="border border-gray-200 group bg-primary-orange text-white p-6 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between h-full"
       >
-        <div className="mb-4 h-50 w-full rounded-md overflow-hidden flex justify-center items-center bg-gray-700">
+        <div className="mb-4 h-50 w-full rounded-md overflow-hidden flex justify-center items-center bg-gray-700 aspect-square">
           <Image
             src={image}
             alt={title}
@@ -33,7 +33,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         <Heading
           as="h3"
           size="md"
-          className="mb-2 font-bold text-white group-hover:text-primary-blue transition-colors"
+          className="mb-2 font-lucky text-white group-hover:text-primary-blue transition-colors"
         >
           {title}
         </Heading>

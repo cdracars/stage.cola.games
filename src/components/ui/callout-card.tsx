@@ -1,5 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import Image from "@/components/overrides/image";
 import React from "react";
 
 interface CalloutCardProps {
@@ -32,7 +32,6 @@ export default function CalloutCard({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          layout="fill"
           objectFit="cover"
           className="w-full h-full"
         />

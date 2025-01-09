@@ -249,7 +249,7 @@ export default function CityTimelinePage() {
     <>
       <Box className="bg-background">
         <Hero
-          src="/images/city-timeline-banner.png"
+          src="/images/reawakening/city-timeline/city-timeline-banner.png"
           alt="Reawakening City Timeline"
         />
         <StaticBreadcrumbs
@@ -268,7 +268,7 @@ export default function CityTimelinePage() {
           endures to this very night.
         </Text>
         <MiniBanner
-          src="/images/walker-texas-vampire.png"
+          src="/images/reawakening/city-timeline/walker-texas-vampire.png"
           alt="Walker, Texas Vampire"
         />
         <Timeline events={events} />

@@ -12,7 +12,7 @@ export default function SupportingCastPage() {
     <Box className="bg-background text-foreground page-section">
       {/* Hero Section */}
       <Hero
-        src="/images/custom-loresheets-banner.png"
+        src="/images/reawakening/custom-loresheets/custom-loresheets-banner.png"
         alt="Custom Loresheets"
       />
       <StaticBreadcrumbs
@@ -23,7 +23,10 @@ export default function SupportingCastPage() {
         ]}
       />
       <Box className="page-section bottom-border">
-        <MiniBanner src="/images/underpass.png" alt="Underpass" />
+        <MiniBanner
+          src="/images/reawakening/custom-loresheets/underpass.png"
+          alt="Underpass"
+        />
         <SectionHeadingsCentered
           section_heading="A City in Torpor"
           subsection_heading="Requirement: Active in the city sometime between 2018 and present night"
@@ -98,7 +101,10 @@ export default function SupportingCastPage() {
       </Box>
 
       <Box className="page-section bottom-border">
-        <MiniBanner src="/images/founders.png" alt="Founders" />
+        <MiniBanner
+          src="/images/reawakening/custom-loresheets/founders.png"
+          alt="Founders"
+        />
         <SectionHeadingsCentered
           section_heading="Founders of Oklahoma City"
           subsection_heading="This loresheet is required to be a city founder in character background"
@@ -159,7 +165,10 @@ export default function SupportingCastPage() {
       </Box>
       <Box className="page-section bottom-border">
         {" "}
-        <MiniBanner src="/images/roses.png" alt="Roses" />
+        <MiniBanner
+          src="/images/reawakening/custom-loresheets/roses.png"
+          alt="Roses"
+        />
         <SectionHeadingsCentered
           section_heading="Grenville, The Archon"
           subsection_heading="Requirement: Active in the city sometime between 1945 - 2018"
@@ -218,19 +227,20 @@ export default function SupportingCastPage() {
       </Box>
       <Box className="page-section bottom-border">
         {" "}
-        <MiniBanner src="/images/axe.png" alt="Axe" />
+        <MiniBanner
+          src="/images/reawakening/custom-loresheets/axe.png"
+          alt="Axe"
+        />
         <SectionHeadingsCentered
           section_heading="Jonathan Gates"
           subsection_heading=""
         />
         <Text className="mb-4">
-          For the last seven years, Oklahoma City has had no traditional
-          centralized government - no Prince, no Elysium, no Sheriff. Your
-          character was a pivotal part in making this unique situation work,
-          helping your fellow Kindred as a leader, mediator and protector of the
-          traditions. Newly embraced Kindred may never have known a city under
-          traditional Camarilla rule, but have gained proficiency in this “New
-          Normal.
+          Whether in recent nights, or during the War of Wolves & Swords, you
+          fought side-by-side with the local Brujah legend himself. During your
+          time together, something of his tenacity, honor and idealism rubbed
+          off on you - you use this reputation as a tool, a way of life, or
+          both.
         </Text>
         <Text className="mb-4">
           This loresheet is ideal for experienced players who enjoy setting

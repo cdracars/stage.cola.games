@@ -1,6 +1,5 @@
 import { StaticBreadcrumbs } from "@/components/ui/breadcrumbs";
 import CalloutCard from "@/components/ui/callout-card";
-import Hero from "@/components/ui/hero";
 import MiniBanner from "@/components/ui/mini-banner";
 import { Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
@@ -9,15 +8,21 @@ export default function AboutUsPage() {
   return (
     <>
       <Box className="bg-secondary-blue text-black page-section">
-        {/* Hero Section */}
-        <Hero src="/images/who-are-we.png" alt="Who are we?" />
+        <Box className="page-section !font-lex !pb-0">
+          {/* Hero Section */}
+          <MiniBanner
+            src="/images/about-us/who-are-we.png"
+            alt="Who are we?"
+            className="bg-white rounded-lg shadow-md !mb-0"
+          />
+        </Box>
         <StaticBreadcrumbs
           routes={[
             { label: "Home", href: "/" },
             { label: "About Us", href: "#" },
           ]}
         />
-        <Box className="page-section bottom-border">
+        <Box className="page-section !font-lex">
           <Text className="mb-4">
             Central Oklahoma Live Action Games (or <strong>COLA Games</strong>,
             for short) is a club of tabletop and live-action gamers looking to
@@ -30,16 +35,23 @@ export default function AboutUsPage() {
             events for both experienced players and those new to the hobby.
           </Text>
           <Text className="mb-4">
-            Click <Link href={"/reawakening"}>here</Link> to explore our
-            upcoming premier Vampire: The Masquerade event{" "}
+            Click{" "}
+            <Link
+              className="text-secondary-purple hover:underline"
+              href={"/reawakening"}
+            >
+              here
+            </Link>{" "}
+            to explore our upcoming premier Vampire: The Masquerade event{" "}
             <span className="text-primary-orange">Reawakening</span>, and stay
             tuned for further events in the central Oklahoma area.
           </Text>
         </Box>
-        <Box className="page-section bottom-border">
+        <Box className="page-section !font-lex">
           <MiniBanner
-            src="/images/what-is-larp.png"
+            src="/images/about-us/what-is-larp.png"
             alt="What is Live-Action Gaming?"
+            className="bg-white rounded-lg shadow-md"
           />
           <Text className="mb-4">
             Live-action roleplaying (or LARP, as it’s commonly called) is very
@@ -63,8 +75,12 @@ export default function AboutUsPage() {
             improvisational theater.
           </Text>
         </Box>
-        <Box className="page-section bottom-border">
-          <MiniBanner src="/images/types-of-larp.png" alt="Types of LARP" />
+        <Box className="page-section  !font-lex">
+          <MiniBanner
+            src="/images/about-us/types-of-larp.png"
+            alt="Types of LARP"
+            className="bg-white rounded-lg shadow-md"
+          />
           <Text className="mb-4">
             There are many different kinds of live-action roleplaying events -
             the two most common kinds in our area are “Boffer” LARPs and
@@ -73,7 +89,7 @@ export default function AboutUsPage() {
           <Box className="mb-4 flex flex-col md:flex-row md:gap-4">
             <CalloutCard
               title={`"Boffer" LARPs`}
-              imageSrc="/images/boffer-larp.jpeg"
+              imageSrc="/images/about-us/boffer-larp.jpeg"
               imageAlt="Viking Woman Snarling"
               description={
                 <>
@@ -87,7 +103,7 @@ export default function AboutUsPage() {
             />
             <CalloutCard
               title={`"Parlor" LARPs`}
-              imageSrc="/images/parlor-larp.jpeg"
+              imageSrc="/images/about-us/parlor-larp.jpeg"
               imageAlt="Man in Suit Sitting"
               description={
                 <>
@@ -108,10 +124,11 @@ export default function AboutUsPage() {
             settings, and more!
           </Text>
         </Box>
-        <Box className="page-section bottom-border">
+        <Box className="page-section  !font-lex">
           <MiniBanner
-            src="/images/what-about-safety.png"
+            src="/images/about-us/what-about-safety.png"
             alt="What about safety?"
+            className="bg-white rounded-lg shadow-md"
           />
           <Text className="mb-4">
             Physical, mental and emotional safety are paramount at any
@@ -128,10 +145,11 @@ export default function AboutUsPage() {
             moment away to recover from intense scenes or in-character drama.
           </Text>
         </Box>
-        <Box className="page-section bottom-border">
+        <Box className="page-section  !font-lex">
           <MiniBanner
-            src="/images/how-to-get-started.png"
+            src="/images/about-us/how-to-get-started.png"
             alt="How do I get started?"
+            className="bg-white rounded-lg shadow-md"
           />
           <Text className="mb-4">
             Getting involved is easy! There are plenty of LARP games and
@@ -144,7 +162,7 @@ export default function AboutUsPage() {
             className="pb-8 block group transition-transform duration-300 hover:scale-105 hover:rotate-1"
           >
             <MiniBanner
-              src="/images/discord-link.png"
+              src="/images/about-us/discord-link.png"
               alt="COLA Games Discord Server"
             />
           </Link>
@@ -153,7 +171,7 @@ export default function AboutUsPage() {
             className="pb-8 block group transition-transform duration-300 hover:scale-105 hover:rotate-1"
           >
             <MiniBanner
-              src="/images/reawakeining-logo.png"
+              src="/images/about-us/reawakeining-logo.png"
               alt="Reawakening A Vampire The Masquerade Live-Action Experience"
             />
           </Link>

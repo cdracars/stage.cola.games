@@ -56,6 +56,8 @@ module.exports = {
         fell: ["'IM Fell English SC'", "serif"],
         marcellus: ["'Marcellus SC'", "serif"],
         cinzel: ["'Cinzel Decorative'", "serif"],
+        lucky: ["'Luckiest Guy'", "cursive"],
+        lex: ["'Lexend'", "sans-serif"],
       },
       backgroundImage: {
         "gradient-header": "linear-gradient(to right, #85200c, #d3563f)",

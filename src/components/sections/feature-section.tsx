@@ -5,28 +5,30 @@ import FeatureCard from "@/components/ui/feature-card";
 
 const features = [
   {
-    title: "What We Do",
+    title: "About our Club",
     description: (
       <>
         <Text>
-          Discover our unique approach to live-action role-playing games.
+          Learn about our club and mission, discover the hobby of live-action
+          gaming, and explore our upcoming live-action experiences!
         </Text>
-        <Text>Immerse yourself in thrilling adventures today!</Text>
       </>
     ),
-    image: "/images/what-we-do-square.jpeg",
-    link: "/what-we-do",
+    image: "/images/home/who-we-are-rps-square.jpeg",
+    link: "/about-us",
   },
   {
-    title: "Join the Guild",
+    title: "Join Our Community",
     description: (
       <>
-        <Text>Become a member of our vibrant community.</Text>
-        <Text>Forge alliances and embark on thrilling quests.</Text>
+        <Text>
+          The COLA Games Discord channel is a great way to meet other gamers in
+          the COLA community and connect with our upcoming events.
+        </Text>
       </>
     ),
-    image: "/images/join-us-on-discord.jpeg",
-    link: "/join-the-guild",
+    image: "/images/home/join-us-on-discord-square.jpeg",
+    link: "https://discord.gg/5p59HPmtYH",
   },
   {
     title: "Reawakening",
@@ -39,7 +41,7 @@ const features = [
         </Text>
       </>
     ),
-    image: "/images/reawakening-splash-square.jpeg",
+    image: "/images/home/reawakening-splash-square.jpeg",
     link: "/reawakening",
   },
 ];
@@ -47,10 +49,7 @@ const features = [
 const FeatureSection = () => {
   return (
     <Box className="py-16 px-8 bg-secondary-blue">
-      <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3 }}
-        className="items-stretch space-x-8"
-      >
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} className="gap-8">
         {features.map((feature) => (
           <FeatureCard key={feature.title} {...feature} />
         ))}

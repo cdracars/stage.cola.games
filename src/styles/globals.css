@@ -99,7 +99,7 @@ body {
 }
 
 .page-section-alt {
-  @apply py-4 px-8 bg-gray-800 rounded-lg font-marcellus;
+  @apply py-4 px-8 bg-gray-700 font-marcellus;
 }
 
 .hero-image {

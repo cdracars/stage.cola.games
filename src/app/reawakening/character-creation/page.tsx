@@ -13,7 +13,7 @@ export default function CharacterCreationPage() {
     <Box className="bg-background text-foreground">
       {/* Hero Section */}
       <Hero
-        src="/images/character-creation-banner.png"
+        src="/images/reawakening/character-creation/character-creation-banner.png"
         alt="Reawakening Character Creation"
       />
 
@@ -66,7 +66,7 @@ export default function CharacterCreationPage() {
           .
         </Text>
         <MiniBanner
-          src="/images/sunglasses.png"
+          src="/images/reawakening/character-creation/sunglasses.png"
           alt="Person Taking of Sunglasses"
         />
       </Box>
@@ -74,7 +74,7 @@ export default function CharacterCreationPage() {
       {/* Discord Section */}
       <Box className="page-section bottom-border">
         <MiniBanner
-          src="/images/step-1.png"
+          src="/images/reawakening/character-creation/step-1.png"
           alt="Step 1 Join Our Discord Server!"
         />
         <Text className="mb-4">
@@ -94,7 +94,10 @@ export default function CharacterCreationPage() {
             />
           </List.Item>
         </List.Root>
-        <MiniBanner src="/images/bright-rave.png" alt="Bright Rave" />
+        <MiniBanner
+          src="/images/reawakening/character-creation/bright-rave.png"
+          alt="Bright Rave"
+        />
         <Text className="mb-4">
           As you develop your character and concept, we encourage you to reach
           out and forge blood ties (Sire & Childe of the same Clan), owe or be
@@ -106,7 +109,7 @@ export default function CharacterCreationPage() {
       {/* Review Section */}
       <Box className="page-section bottom-border">
         <MiniBanner
-          src="/images/step-2.png"
+          src="/images/reawakening/character-creation/step-2.png"
           alt="Step 2 Review Setting Materials"
         />
         <Text className="mb-4">
@@ -139,7 +142,7 @@ export default function CharacterCreationPage() {
           </List.Item>
         </List.Root>
         <MiniBanner
-          src="/images/okc-street-at-night.png"
+          src="/images/reawakening/character-creation/okc-street-at-night.png"
           alt="Oklahoma City Street at Night"
         />
       </Box>
@@ -147,7 +150,7 @@ export default function CharacterCreationPage() {
       {/* Concept Approval Section */}
       <Box className="page-section bottom-border">
         <MiniBanner
-          src="/images/step-3.png"
+          src="/images/reawakening/character-creation/step-3.png"
           alt="Step 3 Get Your Concept Approved"
         />
         <Text className="mb-4">
@@ -192,7 +195,7 @@ export default function CharacterCreationPage() {
           player and maximize character ties within the played clans.
         </Text>
         <MiniBanner
-          src="/images/young-lady-neon-backlit.png"
+          src="/images/reawakening/character-creation/young-lady-neon-backlit.png"
           alt="Young lady neon backlit"
         />
         <Box className="page-section-alt">
@@ -269,17 +272,25 @@ export default function CharacterCreationPage() {
 
       {/* Character Creation Section */}
       <Box className="page-section bottom-border">
-        <MiniBanner src="/images/step-4.png" alt="Step 4 Character Creation" />
+        <MiniBanner
+          src="/images/reawakening/character-creation/step-4.png"
+          alt="Step 4 Character Creation"
+        />
         <Text className="mb-4">
-          You can use the following link to access the Character Creation form -
-          completing this form will submit your character for addition to our
-          database. Please also review the Chronicle Tenets, Initial XP and
-          custom mechanics information below.
+          You can use the following link to download a form-fillable PDF
+          character sheet. Once done, you can save and email this sheet to{" "}
+          <ExternalLink
+            href="mailto:staff@cola.games"
+            text="staff@cola.games"
+          />
+          , and we will enter your character into our database. Please also
+          review the Chronicle Tenets, Initial XP and custom mechanics
+          information below.
         </Text>
         <ExternalLink
-          href="https://forms.office.com/r/58Mi2uW59e"
-          text="Reawakening character Creation form (Vampire)"
-          className="mb-4 text-brand-500"
+          href="https://drive.google.com/file/d/1a77qxt-RsOYyqpZ3LRB3iuCij9CuZHlI/view?usp=sharing"
+          text="Form-Fillable Laws of the Night Character Sheet"
+          className="mb-4 text-brand-500 pl-12"
         />
         <Text className="mb-4">
           Create your character using the Vampire: The Masquerade Laws of the
@@ -287,7 +298,7 @@ export default function CharacterCreationPage() {
           Studios has created an online resource database for character
           creation! We’ve included the links below:
         </Text>
-        <List.Root className="space-y-2 mb-4">
+        <List.Root className="space-y-2 mb-4 pl-12">
           <List.Item>
             <ExternalLink
               href="https://lawsofthenight.com/srd/character-creation/"
@@ -321,149 +332,174 @@ export default function CharacterCreationPage() {
           of this ruleset.
         </Text>
         <MiniBanner
-          src="/images/elegant-woman-hotel.png"
+          src="/images/reawakening/character-creation/elegant-woman-hotel.png"
           alt="Character Creation"
         />
-        <Heading className="subheading !text-inherit">Chronicle Tenets</Heading>
-        <Text className="mb-4">
-          These are the Chronicle Tenets for characters in Reawakening. The game
-          rules will refer to these tenets regularly, as they will impact your
-          character’s struggle between Humanity and their inner Beast - and
-          their descent into becoming less human and more monster.
-        </Text>
-        <List.Root className="space-y-2 list-disc pl-12 mb-4">
-          <List.Item>Do not kill, except in self-defense.</List.Item>
-          <List.Item>Do not harm the innocent.</List.Item>
-          <List.Item>Act like a person, not a beast.</List.Item>
-        </List.Root>
-        <Heading className="subheading !text-inherit">Character Goals</Heading>
-        <Text className="mb-4">
-          We are adding two elements to your character you’ll need in order to
-          play: an Ambition & a Desire.
-        </Text>
-        <Text className="mb-4">
-          <strong>Ambitions</strong> are long-term goals that may take the
-          entire chronicle, or longer, to complete - or might not even be
-          intended to be completed in play. An ambition helps provide an overall
-          drive to a character’s actions.
-        </Text>
-        <Blockquote
-          heading="Example Ambitions"
-          text={
-            <List.Root className="space-y-2">
-              <List.Item>Find your long-lost sire</List.Item>
-              <List.Item>Establish Praxis over Oklahoma City</List.Item>
-              <List.Item>
-                Recover a precious, centuries old item from your character’s
-                mortal life
-              </List.Item>
-            </List.Root>
-          }
-        />
-        <Text className="mb-4">
-          <strong>Desires</strong> are short-term goals that might be
-          accomplished in a single game, or over the course of a couple
-          sessions. Your desire may or may not be related to your Ambition, and
-          may regularly change
-        </Text>
-        <Blockquote
-          heading="Example Desires"
-          text={
-            <List.Root className="space-y-2">
-              <List.Item>Look into those ghost sightings downtown</List.Item>
-              <List.Item>Get out of hot water with the Sheriff</List.Item>
-              <List.Item>Earn an appointment to a court position</List.Item>
-            </List.Root>
-          }
-        />
-        <Text className="mb-4">
-          Goals like these will help tie your character into the world and drive
-          proactive character action and interaction during play.
-        </Text>
+        <Box className="mb-8">
+          <Heading className="subheading !text-inherit">
+            Chronicle Tenets
+          </Heading>
+          <Text className="mb-4">
+            These are the Chronicle Tenets for characters in Reawakening. The
+            game rules will refer to these tenets regularly, as they will impact
+            your character’s struggle between Humanity and their inner Beast -
+            and their descent into becoming less human and more monster.
+          </Text>
+          <List.Root className="space-y-2 list-disc pl-12 mb-4">
+            <List.Item>Do not kill, except in self-defense.</List.Item>
+            <List.Item>Do not harm the innocent.</List.Item>
+            <List.Item>Act like a person, not a beast.</List.Item>
+          </List.Root>
+        </Box>
+        <Box className="mb-8">
+          <Heading className="subheading !text-inherit">
+            Character Goals
+          </Heading>
+          <Text className="mb-4">
+            We are adding two elements to your character you’ll need in order to
+            play: an Ambition & a Desire. Please note these in the “Notes”
+            section of your sheet.
+          </Text>
+          <Text className="mb-4">
+            <strong>Ambitions</strong> are long-term goals that may take the
+            entire chronicle, or longer, to complete - or might not even be
+            intended to be completed in play. An ambition helps provide an
+            overall drive to a character’s actions.
+          </Text>
+          <Blockquote
+            heading="Example Ambitions"
+            text={
+              <List.Root className="space-y-2">
+                <List.Item>Find your long-lost sire</List.Item>
+                <List.Item>Establish Praxis over Oklahoma City</List.Item>
+                <List.Item>
+                  Recover a precious, centuries old item from your character’s
+                  mortal life
+                </List.Item>
+              </List.Root>
+            }
+          />
+          <Text className="mb-4">
+            <strong>Desires</strong> are short-term goals that might be
+            accomplished in a single game, or over the course of a couple
+            sessions. Your desire may or may not be related to your Ambition,
+            and may regularly change
+          </Text>
+          <Blockquote
+            heading="Example Desires"
+            text={
+              <List.Root className="space-y-2">
+                <List.Item>Look into those ghost sightings downtown</List.Item>
+                <List.Item>Get out of hot water with the Sheriff</List.Item>
+                <List.Item>Earn an appointment to a court position</List.Item>
+              </List.Root>
+            }
+          />
+          <Text className="mb-4">
+            Goals like these will help tie your character into the world and
+            drive proactive character action and interaction during play.
+          </Text>
+        </Box>
+        <Box className="mb-8">
+          <Heading className="subheading !text-inherit">
+            Custom Loresheets
+          </Heading>
+          <Text className="mb-4">
+            There are some themes and characters important to our chronicle.
+            We&apos;ve chosen to reflect these using custom Loresheets! You can
+            choose to take one of these Loresheets instead of the ones in the
+            core rules.
+          </Text>
+          <Text className="mb-4">
+            These are a great way to establish your character with ties to our
+            setting and supporting cast. Please remember you can only have one
+            Loresheet associated with your character.
+          </Text>
+          <List.Root className="space-y-2 text-inherit font-bold list-disc pl-12 mb-4">
+            <List.Item>A City in Torpor</List.Item>
+            <List.Item>Founders of Oklahoma City</List.Item>
+            <List.Item>Grenville, the Archon</List.Item>
+            <List.Item>Jonathan Gates</List.Item>
+          </List.Root>
+          <Text className="mb-4">
+            The full mechanics for these loresheets can be found here -{" "}
+            <Link href="/reawakening/custom-loresheets" className="text-accent">
+              Custom Loresheets
+            </Link>
+          </Text>
+        </Box>
+        <Box className="mb-8">
+          <Heading className="subheading !text-inherit">Initial XP</Heading>
+          <Text className="mb-4">
+            Your character will start with 20 Initial XP per the core rules (p.
+            96), but will also have some additional XP for already completed
+            games. This extra XP is to help characters joining mid-chronicle
+            keep pace. You will also gain some additional XP upon the purchase
+            of your Event Ticket or Season Pass.
+          </Text>
+          <Blockquote
+            heading="Initial XP - Individual Event Ticket"
+            text={
+              <List.Root className="space-y-2">
+                <List.Item>20 XP per the Core Rules (p. 96)</List.Item>
+                <List.Item>
+                  5 bonus XP per already completed game of the chronicle
+                </List.Item>
+                <List.Item>
+                  An additional 10 XP upon purchase of a ticket for the upcoming
+                  game
+                </List.Item>
+              </List.Root>
+            }
+          />
+          <Text className="mb-4">
+            This means after ticket purchase, a character will typically start
+            with a total of 30 xp plus an additional 5 per completed game of the
+            chronicle.
+          </Text>
+          <Blockquote
+            heading="Initial XP - Season Pass"
+            text={
+              <List.Root className="space-y-2">
+                <List.Item>20 XP per the Core Rules (p. 96)</List.Item>
+                <List.Item>
+                  10 XP per already completed game of the chronicle
+                </List.Item>
+                <List.Item>
+                  An additional 10 XP, reflecting the experience award for the
+                  upcoming game
+                </List.Item>
+              </List.Root>
+            }
+          />
+          <Text className="mb-4">
+            This means after ticket purchase, a character will typically start
+            with a total of 30 xp plus an additional 10 per completed game of
+            the chronicle.
+          </Text>
+        </Box>
         <Heading className="subheading !text-inherit">
-          Character Loresheets
+          Submitting Your Sheets
         </Heading>
         <Text className="mb-4">
-          There are some themes and characters important to our chronicle.
-          We&apos;ve chosen to reflect these using custom Loresheets! You can
-          choose to take one of these Loresheets instead of the ones in the core
-          rules.
+          Once you’re done, email your sheet to{" "}
+          <ExternalLink href="staff@cola.games" text="staff@cola.games" /> and
+          we’ll take a look to make sure the character is set up correctly in
+          the database. We will send you a link to your sheet online once we are
+          done.
         </Text>
-        <Text className="mb-4">
-          These are a great way to establish your character with ties to our
-          setting and supporting cast. Please remember you can only have one
-          Loresheet associated with your character.
-        </Text>
-        <List.Root className="space-y-2 text-inherit font-bold list-disc pl-12 mb-4">
-          <List.Item>A City in Torpor</List.Item>
-          <List.Item>Founders of Oklahoma City</List.Item>
-          <List.Item>Grenville, the Archon</List.Item>
-          <List.Item>Jonathan Gates</List.Item>
-        </List.Root>
-        <Text className="mb-4">
-          The full mechanics for these loresheets can be found here -{" "}
-          <Link href="/reawakening/custom-loresheets" className="text-accent">
-            Custom Loresheets
-          </Link>
-        </Text>
-        <Heading className="subheading !text-inherit">Initial XP</Heading>
-        <Text className="mb-4">
-          Your character will start with 20 Initial XP per the core rules (p.
-          96), but will also have some additional XP for already completed
-          games. This extra XP is to help characters joining mid-chronicle keep
-          pace. You will also gain some additional XP upon the purchase of your
-          Event Ticket or Season Pass.
-        </Text>
-        <Blockquote
-          heading="Initial XP - Individual Event Ticket"
-          text={
-            <List.Root className="space-y-2">
-              <List.Item>20 XP per the Core Rules (p. 96)</List.Item>
-              <List.Item>
-                5 bonus XP per already completed game of the chronicle
-              </List.Item>
-              <List.Item>
-                An additional 10 XP upon purchase of a ticket for the upcoming
-                game
-              </List.Item>
-            </List.Root>
-          }
+        <MiniBanner
+          src="/images/reawakening/character-creation/man-in-suit.png"
+          alt="Character Creation"
         />
-        <Text className="mb-4">
-          This means after ticket purchase, a character will typically start
-          with a total of 30 xp plus an additional 5 per completed game of the
-          chronicle.
-        </Text>
-        <Blockquote
-          heading="Initial XP - Season Pass"
-          text={
-            <List.Root className="space-y-2">
-              <List.Item>20 XP per the Core Rules (p. 96)</List.Item>
-              <List.Item>
-                10 XP per already completed game of the chronicle
-              </List.Item>
-              <List.Item>
-                An additional 10 XP, reflecting the experience award for the
-                upcoming game
-              </List.Item>
-            </List.Root>
-          }
-        />
-        <Text className="mb-4">
-          This means after ticket purchase, a character will typically start
-          with a total of 30 xp plus an additional 10 per completed game of the
-          chronicle.
-        </Text>
-        <Text className="mb-4">
-          Once you’re done, <strong>let us know</strong> and we’ll take a look
-          to make sure the character is set up correctly in the database.
-        </Text>
-        <MiniBanner src="/images/man-in-suit.png" alt="Character Creation" />
       </Box>
 
       {/* Pick a Ticket Section */}
       <Box className="page-section bottom-border">
-        <MiniBanner src="/images/step-5.png" alt="Step 5 Pick a Ticket" />
+        <MiniBanner
+          src="/images/reawakening/character-creation/step-5.png"
+          alt="Step 5 Pick a Ticket"
+        />
         <Text className="mb-4">
           You can purchase a ticket for the next Reawakening game&nbsp;
           <ExternalLink
@@ -473,7 +509,10 @@ export default function CharacterCreationPage() {
           . Tickets are $25 per event, or you can purchase a Season Pass for
           $100.
         </Text>
-        <MiniBanner src="/images/velvet-rope.png" alt="Velvet Rope" />
+        <MiniBanner
+          src="/images/reawakening/character-creation/velvet-rope.png"
+          alt="Velvet Rope"
+        />
         <Blockquote
           heading="Individual Event Ticket"
           text={
@@ -524,25 +563,43 @@ export default function CharacterCreationPage() {
       {/* See you at game section */}
       <Box className="page-section">
         <MiniBanner
-          src="/images/step-6.png"
+          src="/images/reawakening/character-creation/step-6.png"
           alt="Step 6 We Will See You at Game..."
         />
-        <MiniBanner src="/images/vampire-eyes.png" alt="Vampire Eyes" />
+        <MiniBanner
+          src="/images/reawakening/character-creation/vampire-eyes.png"
+          alt="Vampire Eyes"
+        />
         <Text className="mb-4">
           We can’t wait to share our chronicle with you, and see what stories
           you and your fellow players tell. As the Chronicle progresses, your
           character’s skills and abilities will grow as you gain XP.{" "}
         </Text>
-        <Text className="mb-4">
-          You can take a look at the rules for character advancement here -{" "}
-          <Link
-            href="/reawakening/character-advancement"
-            className="text-accent"
-          >
-            Character Advancement
-          </Link>
-          .
+        <Text className="mb-8">
+          Please see below for all rules on character advancement, death and
+          retirement, along with any custom mechanics that will be in play.
         </Text>
+        <Heading className="subheading !text-inherit">
+          Links to Chronicle Rules
+        </Heading>
+        <List.Root className="list-disc space-y-2 pl-12">
+          <List.Item>
+            <Link
+              className="text-accent hover:underline"
+              href="/reawakening/character-advancement"
+            >
+              Rules for Character Advancement, Death and Retirement
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link
+              href="/reawakening/custom-mechanics"
+              className="text-accent hover:underline"
+            >
+              Custom Mechanics & Rules Clarifications
+            </Link>
+          </List.Item>
+        </List.Root>
       </Box>
     </Box>
   );

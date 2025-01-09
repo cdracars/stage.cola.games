@@ -21,9 +21,14 @@ const Header = () => {
   const isReawakeningPath = pathname.startsWith("/reawakening");
   const classes = `${
     isReawakeningPath
-      ? "bg-gray-800 text-gray-100 bottom-border"
+      ? "bg-gray-700 text-gray-100 bottom-border"
       : "bg-primary-blue text-white"
   }`;
+  const font = isReawakeningPath ? "font-della" : "font-lucky";
+  const hover = isReawakeningPath
+    ? "hover:text-brand-500"
+    : "hover:text-primary-orange";
+  const color = isReawakeningPath ? "text-brand-500" : "text-primary-orange";
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -33,19 +38,19 @@ const Header = () => {
   ];
 
   return (
-    <Box className={`${classes} px-4 font-della`}>
+    <Box className={`${classes} px-4 ${font} shadow-md`}>
       <Flex className="h-16 items-center justify-between max-w-screen-xl mx-auto">
         {/* Logo */}
-        <HStack className="space-x-2">
-          <Image
-            src="/logo.png"
-            alt="COLA Games Logo"
-            className="h-10 w-10 object-contain"
-          />
-          <Box className="text-xl font-bold text-primary-orange">
-            COLA Games
-          </Box>
-        </HStack>
+        <Link href="/">
+          <HStack className="space-x-2">
+            <Image
+              src="/logo.png"
+              alt="COLA Games Logo"
+              className="h-10 w-10 object-contain"
+            />
+            <Box className={`text-xl ${color}`}>COLA Games</Box>
+          </HStack>
+        </Link>
 
         {/* Desktop Navigation */}
         <HStack
@@ -58,7 +63,7 @@ const Header = () => {
               key={link.name}
               href={link.href}
               // className="hover:text-brand-500 transition-colors"
-              className="hover:text-primary-orange transition-colors duration-200"
+              className={`${hover} transition-colors duration-200`}
             >
               {link.name}
             </Link>

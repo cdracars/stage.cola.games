@@ -8,6 +8,8 @@ import {
   Marcellus_SC,
   La_Belle_Aurore,
   Cinzel_Decorative,
+  Luckiest_Guy,
+  Lexend,
 } from "next/font/google";
 import { Provider } from "../ui/provider";
 import Header from "./header";
@@ -43,6 +45,18 @@ const cinzelDecorative = Cinzel_Decorative({
   weight: "400",
 });
 
+const luckiestGuy = Luckiest_Guy({
+  subsets: ["latin"],
+  variable: "--font-luckiest-guy",
+  weight: "400",
+});
+
+const lexend = Lexend({
+  subsets: ["latin"],
+  variable: "--font-lexend",
+  weight: "400",
+});
+
 const MainContent: React.FC<{ children: ReactNode }> = ({ children }) => {
   const pathname = usePathname();
 
@@ -55,12 +69,14 @@ const MainContent: React.FC<{ children: ReactNode }> = ({ children }) => {
   }`;
 
   const bodyClasses = `${
-    isReawakeningPath ? "bg-gray-800 text-gray-100" : "bg-white text-gray-800"
+    isReawakeningPath
+      ? "bg-gray-800 text-gray-100"
+      : "bg-white text-gray-800 font-lex"
   }`;
 
   return (
     <body
-      className={`${bodyClasses} ${dellaRespira.variable} ${imFellEnglishSC.variable} ${marcellusSC.variable} ${laBelleAurore.variable} ${cinzelDecorative.variable} antialiased flex flex-col min-h-screen`}
+      className={`${bodyClasses} ${luckiestGuy.variable} ${lexend.variable} ${dellaRespira.variable} ${imFellEnglishSC.variable} ${marcellusSC.variable} ${laBelleAurore.variable} ${cinzelDecorative.variable} antialiased flex flex-col min-h-screen`}
     >
       <Provider>
         {/* Header */}

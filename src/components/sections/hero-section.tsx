@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Background Image */}
       <Box className="absolute inset-0">
         <Image
-          src="/images/soda-bottle.jpg" // Replace with your image path
+          src="/images/home/soda-bottle.jpg" // Replace with your image path
           alt="Hero Background"
           objectFit="cover"
           className="w-full h-full"
@@ -21,14 +21,13 @@ const Hero = () => {
       <VStack className="absolute inset-0 flex items-center justify-center text-center px-4 bg-black/50 space-x-4">
         <Heading
           as="h1"
-          className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg"
+          className="text-white text-3xl md:text-5xl font-lucky drop-shadow-lg"
         >
           Welcome to COLA Games
         </Heading>
         <Text className="text-white text-lg md:text-xl drop-shadow-md">
-          Experience immersive live-action role-playing events. Create your
-          character, step into thrilling stories, and bring the COLA universe to
-          life!
+          Experience immersive live-action roleplaying events. Come help us tell
+          fun & thrilling stories as we grow our hobby in Oklahoma!
         </Text>
         <Box className="flex flex-wrap justify-center gap-4">
           <Link href="/events" passHref>

@@ -12,7 +12,7 @@ interface RelatedLinksProps {
 
 export default function RelatedLinks({ links }: RelatedLinksProps) {
   return (
-    <Box className="bg-gray-900 text-white py-6 px-4 mt-8 rounded-md shadow-md">
+    <Box className="bg-gray-900 text-white py-6 px-4 my-8 rounded-md shadow-md">
       <Heading
         as="h3"
         className="text-lg font-bold mb-4 text-center text-gray-300 font-cinzel"

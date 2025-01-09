@@ -11,7 +11,7 @@ export default function SupportingCastPage() {
     <Box className="bg-background text-foreground">
       {/* Hero Section */}
       <Hero
-        src="/images/supporting-cast-banner.png"
+        src="/images/reawakening/supporting-cast/supporting-cast-banner.png"
         alt="Reawakening Supporting Cast"
       />
 
@@ -30,7 +30,10 @@ export default function SupportingCastPage() {
           The following is a list of characters that have appeared in the
           Vampire: The Masquerade - Reawakening campaign.
         </Text>
-        <MiniBanner src="/images/violin.png" alt="Violin" />
+        <MiniBanner
+          src="/images/reawakening/supporting-cast/violin.png"
+          alt="Violin"
+        />
       </Box>
 
       <CharacterProfile

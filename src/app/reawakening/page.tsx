@@ -12,7 +12,7 @@ export default function ReawakeningPage() {
   return (
     <Box className="bg-background text-foreground">
       <Hero
-        src="/images/reawakening-welcome-banner.png"
+        src="/images/reawakening/reawakening-welcome-banner.png"
         alt="Reawakening Event Banner"
       />
 
@@ -26,7 +26,7 @@ export default function ReawakeningPage() {
       {/* Centered Image Section */}
       <Box className="flex justify-center py-8 bottom-border">
         <Image
-          src="/images/letter.jpeg"
+          src="/images/reawakening/letter.jpeg"
           alt="Letter from the Founders"
           className="rounded-md shadow-lg max-w-[90%] md:max-w-[60%]"
         />
@@ -35,7 +35,7 @@ export default function ReawakeningPage() {
       {/* About Section */}
       <Box className="page-section">
         <MiniBanner
-          src="/images/welcome-to-our-chronicle.png"
+          src="/images/reawakening/welcome-to-our-chronicle.png"
           alt="Welcome to our chronicle"
         />
         <Text className="mb-4">
