@@ -44,8 +44,8 @@ const nextConfig: NextConfig = {
     ];
 
     config.output.publicPath = isProd
-      ? '/stage.cola.games/_next/'
-      : '/_next/';
+      ? '/_next/'
+      : '/stage.cola.games/_next/';
 
     return config;
   },
