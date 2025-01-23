@@ -10,7 +10,7 @@ const events = [
       "Come meet the crew, create your character & connect with your fellow players at this free pre-chronicle event.",
   },
   {
-    title: "Game 1: Reawakening",
+    title: "Reawakening: Game 1",
     date: "March 1, 2025",
     time: "2:30 PM - 10:00 PM",
     location:
@@ -18,20 +18,20 @@ const events = [
     description: "Tickets Available Soon",
   },
   {
-    title: "Game 2: Carve & Chop",
+    title: "Reawakening: Game 2",
     date: "May 3, 2025",
     time: "2:30 PM - 10:00 PM",
     location:
       "University of Central Oklahoma, Nigh University Center, 4th Floor",
   },
   {
-    title: "Game 3: Loyalties",
+    title: "Reawakening: Game 3",
     date: "July 5, 2025",
     time: "2:30 PM - 10:00 PM",
     location: "Will Rogers Gardens Exhibition Center",
   },
   {
-    title: "Game 4: Blood Moon",
+    title: "Reawakening: Game 4",
     date: "Aug 30, 2025",
     time: "2:30 PM - 10:00 PM",
     location: "Will Rogers Gardens Exhibition Center",
@@ -42,13 +42,13 @@ const events = [
     location: "To be Announced",
   },
   {
-    title: "Game 5: Apostasy",
+    title: "Reawakening: Game 5",
     date: "November 22, 2025",
     time: "2:30 PM - 10:00 PM",
     location: "Will Rogers Gardens Exhibition Center",
   },
   {
-    title: "Game 6: Finale",
+    title: "Reawakening: Game 6",
     date: "January, 2026",
     location: "To be Announced",
   },
