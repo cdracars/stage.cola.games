@@ -26,8 +26,8 @@ interface NextConfig {
 
 const nextConfig: NextConfig = {
   output: "export", // Required for GitHub Pages static export
-  basePath: isProd ? "/stage.cola.games" : "",
-  assetPrefix: isProd ? "/stage.cola.games/" : "",
+  basePath: isProd ? "" : "/stage.cola.games",
+  assetPrefix: isProd ? "" : "/stage.cola.games/",
   trailingSlash: true, // Ensure all routes end with a slash
   images: {
     unoptimized: true, // Disable Next.js image optimization for GitHub Pages
