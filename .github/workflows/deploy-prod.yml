@@ -1,0 +1,38 @@
+name: Deploy to Production
+
+on:
+  push:
+    tags:
+      - "v*" # listens to tags starting with 'v', e.g. v1.0.0, v2.3.4
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: |
+          yarn install
+
+      - name: Build site
+        run: |
+          yarn build
+
+      - name: Deploy to Production Repo
+        run: |
+          cd out
+          git init
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Production deploy for $GITHUB_REF"
+
+          # Force push to the gh-pages branch of your production repo
+          git push --force "https://x-access-token:${{ secrets.PRODUCTION_PAT }}@github.com/cdracars/cola.games.git" HEAD:gh-pages
