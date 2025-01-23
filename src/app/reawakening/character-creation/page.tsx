@@ -7,6 +7,7 @@ import ExternalLink from "@/components/ui/external-link";
 import Link from "next/link";
 import Hero from "@/components/ui/hero";
 import { StaticBreadcrumbs } from "@/components/ui/breadcrumbs";
+import ReawakeningQuickLinks from "@/components/sections/reawakening-quick-nav-section";
 
 export default function CharacterCreationPage() {
   return (
@@ -502,12 +503,8 @@ export default function CharacterCreationPage() {
         />
         <Text className="mb-4">
           You can purchase a ticket for the next Reawakening game&nbsp;
-          <ExternalLink
-            href="https://www.eventbrite.com/e/reawakening-tickets-166366073287"
-            text="here"
-          />
-          . Tickets are $25 per event, or you can purchase a Season Pass for
-          $100.
+          <ExternalLink href="/events" text="here" />. Tickets are $25 per
+          event, or you can purchase a Season Pass for $100.
         </Text>
         <MiniBanner
           src="/images/reawakening/character-creation/velvet-rope.png"
@@ -601,6 +598,7 @@ export default function CharacterCreationPage() {
           </List.Item>
         </List.Root>
       </Box>
+      <ReawakeningQuickLinks />
     </Box>
   );
 }

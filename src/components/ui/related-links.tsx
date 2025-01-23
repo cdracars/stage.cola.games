@@ -1,4 +1,5 @@
-import { Box, Heading, Flex, Link, Text } from "@chakra-ui/react";
+import { Box, Heading, Flex, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface RelatedLink {
   label: string;

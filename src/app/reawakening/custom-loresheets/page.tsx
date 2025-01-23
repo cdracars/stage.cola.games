@@ -6,6 +6,7 @@ import SectionHeadingsCentered from "@/components/ui/section-headings-centered";
 import LoresheetEntry from "@/components/ui/loresheet-entry";
 import Hero from "@/components/ui/hero";
 import { StaticBreadcrumbs } from "@/components/ui/breadcrumbs";
+import ReawakeningQuickLinks from "@/components/sections/reawakening-quick-nav-section";
 
 export default function SupportingCastPage() {
   return (
@@ -295,6 +296,7 @@ export default function SupportingCastPage() {
           }
         />
       </Box>
+      <ReawakeningQuickLinks />
     </Box>
   );
 }

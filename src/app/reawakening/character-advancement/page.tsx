@@ -6,6 +6,7 @@ import SectionHeadingsCentered from "@/components/ui/section-headings-centered";
 import Hero from "@/components/ui/hero";
 import { StaticBreadcrumbs } from "@/components/ui/breadcrumbs";
 import Blockquote from "@/components/ui/blockquote";
+import ReawakeningQuickLinks from "@/components/sections/reawakening-quick-nav-section";
 
 export default function CharacterAdvancementPage() {
   return (
@@ -182,6 +183,7 @@ export default function CharacterAdvancementPage() {
           Pass characters will always be created at maximum chronicle XP.
         </Text>
       </Box>
+      <ReawakeningQuickLinks />
     </Box>
   );
 }

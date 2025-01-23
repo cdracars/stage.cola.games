@@ -4,6 +4,7 @@ import { Box, Heading, List, Text } from "@chakra-ui/react";
 import SectionHeadingsCentered from "@/components/ui/section-headings-centered";
 import Blockquote from "@/components/ui/blockquote";
 import { CollapsibleSection } from "@/components/ui/colapsable-section";
+import ReawakeningQuickLinks from "@/components/sections/reawakening-quick-nav-section";
 
 export default function CharacterAdvancementPage() {
   return (
@@ -369,6 +370,7 @@ export default function CharacterAdvancementPage() {
           }
         />
       </Box>
+      <ReawakeningQuickLinks />
     </Box>
   );
 }

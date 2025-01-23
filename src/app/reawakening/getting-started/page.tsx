@@ -6,6 +6,7 @@ import MiniBanner from "@/components/ui/mini-banner";
 import Hero from "@/components/ui/hero";
 import { StaticBreadcrumbs } from "@/components/ui/breadcrumbs";
 import Blockquote from "@/components/ui/blockquote";
+import ReawakeningQuickLinks from "@/components/sections/reawakening-quick-nav-section";
 
 export default function ReawakeningChroniclePage() {
   return (
@@ -261,6 +262,7 @@ export default function ReawakeningChroniclePage() {
           Character Creation
         </Link>
       </Box>
+      <ReawakeningQuickLinks />
     </Box>
   );
 }

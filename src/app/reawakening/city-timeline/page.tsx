@@ -3,6 +3,7 @@ import { Box, Text } from "@chakra-ui/react";
 import MiniBanner from "@/components/ui/mini-banner";
 import Hero from "@/components/ui/hero";
 import { StaticBreadcrumbs } from "@/components/ui/breadcrumbs";
+import ReawakeningQuickLinks from "@/components/sections/reawakening-quick-nav-section";
 
 const events = [
   {
@@ -272,6 +273,7 @@ export default function CityTimelinePage() {
           alt="Walker, Texas Vampire"
         />
         <Timeline events={events} />
+        <ReawakeningQuickLinks />
       </Box>
     </>
   );
