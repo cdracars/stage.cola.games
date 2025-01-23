@@ -25,6 +25,10 @@ jobs:
         run: |
           yarn build
 
+      - name: Add CNAME file
+        run: |
+          echo "cola.games" > out/CNAME
+
       - name: Deploy to Production Repo
         run: |
           cd out
