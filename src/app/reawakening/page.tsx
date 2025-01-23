@@ -93,6 +93,12 @@ export default function ReawakeningPage() {
                 "Discover how to advance your character and unlock new abilities.",
             },
             {
+              label: "Custom Mechanics",
+              href: "/reawakening/custom-mechanics",
+              description:
+                "Take a look at the custom mechanics in our chronicle.",
+            },
+            {
               label: "Supporting Cast",
               href: "/reawakening/supporting-cast",
               description: "Meet the important NPCs in the chronicle.",

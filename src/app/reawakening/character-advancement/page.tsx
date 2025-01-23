@@ -7,12 +7,12 @@ import Hero from "@/components/ui/hero";
 import { StaticBreadcrumbs } from "@/components/ui/breadcrumbs";
 import Blockquote from "@/components/ui/blockquote";
 
-export default function SupportingCastPage() {
+export default function CharacterAdvancementPage() {
   return (
     <Box className="bg-background text-foreground page-section">
       {/* Hero Section */}
       <Hero
-        src="/images/advancement-banner.png"
+        src="/images/reawakening/character-advancement/advancement-banner.png"
         alt="Reawakening Character Advancement Death & Retirement"
       />
       <StaticBreadcrumbs
@@ -23,7 +23,10 @@ export default function SupportingCastPage() {
         ]}
       />
       <Box className="page-section bottom-border">
-        <MiniBanner src="/images/skull-rose.png" alt="Skull and Rose" />
+        <MiniBanner
+          src="/images/reawakening/character-advancement/skull-rose.png"
+          alt="Skull and Rose"
+        />
         <SectionHeadingsCentered
           section_heading="Character Advancement"
           subsection_heading=""
@@ -143,7 +146,10 @@ export default function SupportingCastPage() {
         </Text>
       </Box>
       <Box className="page-section bottom-border">
-        <MiniBanner src="/images/bloody-hand.png" alt="Bloody Hand" />
+        <MiniBanner
+          src="/images/reawakening/character-advancement/bloody-hand.png"
+          alt="Bloody Hand"
+        />
         <SectionHeadingsCentered
           section_heading="Final Death"
           subsection_heading=""

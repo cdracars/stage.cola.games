@@ -19,6 +19,11 @@ const Hero = () => {
 
       {/* Content Overlay */}
       <VStack className="absolute inset-0 flex items-center justify-center text-center px-4 bg-black/50 space-x-4">
+        <Image
+          src="/images/logos/COLA_Logo_box_candy.svg"
+          alt="COLA Games Logo"
+          className="w-[350px] h-auto object-contain mb-4"
+        />
         <Heading
           as="h1"
           className="text-white text-3xl md:text-5xl font-lucky drop-shadow-lg"

@@ -1,23 +1,70 @@
-import { VStack, Box, Heading, Text, Link } from "@chakra-ui/react";
+import EventCard from "@/components/ui/EventCard";
+const events = [
+  {
+    title: "Pre-Chronicle Cast & Crew Connect",
+    date: "February 15, 2025",
+    time: "1:00 PM - 4:00 PM",
+    location:
+      "University of Central Oklahoma, Nigh University Center, 2nd Floor Lounge",
+    description:
+      "Come meet the crew, create your character & connect with your fellow players at this free pre-chronicle event.",
+  },
+  {
+    title: "Game 1: Reawakening",
+    date: "March 1, 2025",
+    time: "2:30 PM - 10:00 PM",
+    location:
+      "University of Central Oklahoma, Nigh University Center, 4th Floor",
+    description: "Tickets Available Soon",
+  },
+  {
+    title: "Game 2: Carve & Chop",
+    date: "May 3, 2025",
+    time: "2:30 PM - 10:00 PM",
+    location:
+      "University of Central Oklahoma, Nigh University Center, 4th Floor",
+  },
+  {
+    title: "Game 3: Loyalties",
+    date: "July 5, 2025",
+    time: "2:30 PM - 10:00 PM",
+    location: "Will Rogers Gardens Exhibition Center",
+  },
+  {
+    title: "Game 4: Blood Moon",
+    date: "Aug 30, 2025",
+    time: "2:30 PM - 10:00 PM",
+    location: "Will Rogers Gardens Exhibition Center",
+  },
+  {
+    title: "Mid-Season Social Event",
+    date: "October, 2025",
+    location: "To be Announced",
+  },
+  {
+    title: "Game 5: Apostasy",
+    date: "November 22, 2025",
+    time: "2:30 PM - 10:00 PM",
+    location: "Will Rogers Gardens Exhibition Center",
+  },
+  {
+    title: "Game 6: Finale",
+    date: "January, 2026",
+    location: "To be Announced",
+  },
+];
 
 export default function EventsPage() {
   return (
-    <VStack align="start" py={8} px={4}>
-      <Heading>Upcoming Events</Heading>
-      <Box>
-        <Text fontWeight="bold">December 20, 2024</Text>
-        <Text>Winter Campaign Kickoff</Text>
-        <Link href="https://example.com/tickets" color="blue.500">
-          Buy Tickets
-        </Link>
-      </Box>
-      <Box>
-        <Text fontWeight="bold">January 15, 2025</Text>
-        <Text>New Year’s LARP Extravaganza</Text>
-        <Link href="https://example.com/tickets" color="blue.500">
-          Buy Tickets
-        </Link>
-      </Box>
-    </VStack>
+    <div className="bg-secondary-blue text-white  font-lex p-8">
+      <h1 className="text-4xl text-center text-primary-orange mb-8">
+        Event Schedule
+      </h1>
+      <div className="space-y-8">
+        {events.map((event, index) => (
+          <EventCard key={index} {...event} />
+        ))}
+      </div>
+    </div>
   );
 }

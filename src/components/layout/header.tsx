@@ -28,7 +28,7 @@ const Header = () => {
   const hover = isReawakeningPath
     ? "hover:text-brand-500"
     : "hover:text-primary-orange";
-  const color = isReawakeningPath ? "text-brand-500" : "text-primary-orange";
+  const vamp = isReawakeningPath ? "vamp" : "candy";
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -41,14 +41,13 @@ const Header = () => {
     <Box className={`${classes} px-4 ${font} shadow-md`}>
       <Flex className="h-16 items-center justify-between max-w-screen-xl mx-auto">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" className="w-100">
           <HStack className="space-x-2">
             <Image
-              src="/logo.png"
+              src={`/images/logos/COLA_Logo_long_${vamp}.svg`}
               alt="COLA Games Logo"
-              className="h-10 w-10 object-contain"
+              className="w-[148.5px] h-auto object-contain"
             />
-            <Box className={`text-xl ${color}`}>COLA Games</Box>
           </HStack>
         </Link>
 

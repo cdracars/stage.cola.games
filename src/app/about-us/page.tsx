@@ -3,17 +3,17 @@ import CalloutCard from "@/components/ui/callout-card";
 import MiniBanner from "@/components/ui/mini-banner";
 import { Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
+import Image from "@/components/overrides/image";
 
 export default function AboutUsPage() {
   return (
     <>
       <Box className="bg-secondary-blue text-black page-section">
-        <Box className="page-section !font-lex !pb-0">
-          {/* Hero Section */}
-          <MiniBanner
-            src="/images/about-us/who-are-we.png"
-            alt="Who are we?"
-            className="bg-white rounded-lg shadow-md !mb-0"
+        <Box className="bottom-border">
+          <Image
+            src="/images/logos/COLA_Logo_box_candy.svg"
+            alt="COLA Games Logo"
+            className="block mx-auto w-[350px] h-auto object-contain mb-4"
           />
         </Box>
         <StaticBreadcrumbs
@@ -22,6 +22,14 @@ export default function AboutUsPage() {
             { label: "About Us", href: "#" },
           ]}
         />
+        <Box className="page-section !font-lex !pb-0">
+          {/* Hero Section */}
+          <MiniBanner
+            src="/images/about-us/who-are-we.png"
+            alt="Who are we?"
+            className="bg-white rounded-lg shadow-md !mb-0"
+          />
+        </Box>
         <Box className="page-section !font-lex">
           <Text className="mb-4">
             Central Oklahoma Live Action Games (or <strong>COLA Games</strong>,
