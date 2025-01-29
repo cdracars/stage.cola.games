@@ -129,7 +129,7 @@ export default function SupportingCastPage() {
               You are looked to for your counsel and leadership. Once per
               session, you may lend your advice to another Kindred in the city.
               It must be the player’s first game of the chronicle, and the
-              character may not have this loresheet. That character is at a +0
+              character may not have this loresheet. That character is at a +1
               to all tests for the evening. This bonus does not stack if
               provided by multiple Founders.
             </>
@@ -244,8 +244,11 @@ export default function SupportingCastPage() {
           both.
         </Text>
         <Text className="mb-4">
-          This loresheet is ideal for experienced players who enjoy setting
-          history, lore, and being looked to as a veteran of city politics.
+          This loresheet is ideal for players looking to portray idealistic or
+          high-humanity characters. When taking this Loresheet, it’s important
+          to understand:{" "}
+          <strong>there are no true “good guys” in Vampire</strong>. This said,
+          some characters are better at holding onto their Humanity than others.
         </Text>
         <LoresheetEntry
           name="Lead by Example"

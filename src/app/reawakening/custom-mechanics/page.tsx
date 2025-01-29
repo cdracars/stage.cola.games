@@ -23,6 +23,23 @@ export default function CharacterAdvancementPage() {
       />
       <Box className="page-section bottom-border">
         <SectionHeadingsCentered
+          section_heading="Simple Scene Resolution"
+          subsection_heading=""
+        />
+        <Text className="mb-4">
+          We will be maintaining the game schedule, with strict start and stop
+          times for the game and for intermission. As a result, when a scene
+          appears like it may go over time, our Storytellers will propose
+          mediation, then move to a simplified resolution using a simple test,
+          opposed test or series of tests, narrating the outcome.
+        </Text>
+        <Text className="mb-4">
+          The resulting ST narration of the scene will be final.
+        </Text>
+        <Text className="mb-4">Please plan any shenanigans accordingly.</Text>
+      </Box>
+      <Box className="page-section bottom-border">
+        <SectionHeadingsCentered
           section_heading="Rapid Mass Combat"
           subsection_heading=""
         />
@@ -96,7 +113,7 @@ export default function CharacterAdvancementPage() {
               <Text className="mb-4">
                 In addition, the status restriction for a Boon Breaker will not
                 be lifted automatically after six months - the boon must be
-                satisfied per the Harpy.
+                satisfied per the Herald.
               </Text>
             </>
           }
@@ -164,8 +181,9 @@ export default function CharacterAdvancementPage() {
                 with the “Compact” quality, and Protective Gear with the
                 “Inconspicuous” quality do not require a visible name-tag holder
                 and their related item cards may instead be carried somewhere on
-                the character’s person. This reflects the fact these items are
-                not visible to other characters.
+                the character’s person. This includes gear Concealed with the
+                powers of Obfuscate. This reflects the fact these items are not
+                visible to other characters.
               </Text>
               <Text className="mb-4">
                 The character is considered to have immediate access to these

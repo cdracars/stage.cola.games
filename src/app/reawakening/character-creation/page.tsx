@@ -37,7 +37,7 @@ export default function CharacterCreationPage() {
         </Text>
         <Text className="mb-4">
           As a reminder, we are using the setting and rules contained within the
-          latest version of
+          latest version of{" "}
           <strong>Vampire: The Masquerade - Laws of the Night</strong> by&nbsp;
           <ExternalLink
             href="https://bynightstudios.com/products/laws-of-the-night-v5-softcover.html"
@@ -60,7 +60,7 @@ export default function CharacterCreationPage() {
           & replacement characters can be found&nbsp;
           <Link
             href="/reawakening/character-advancement"
-            className="text-accent"
+            className="text-accent font-bold"
           >
             here
           </Link>
@@ -87,7 +87,7 @@ export default function CharacterCreationPage() {
           will be able to forge in-character and out-of-character connections
           with other players.
         </Text>
-        <List.Root className="space-y-2">
+        <List.Root className="list-disc font-bold pl-12 space-y-2">
           <List.Item>
             <ExternalLink
               href="https://discord.gg/5p59HPmtYH"
@@ -128,16 +128,22 @@ export default function CharacterCreationPage() {
           There are some unique circumstances in Oklahoma City these nights,
           involving some city history and notable characters.
         </Text>
-        <List.Root className="space-y-2">
+        <List.Root className="list-disc pl-12 space-y-2">
           <List.Item>
             Review the vampire history of Oklahoma City here -&nbsp;
-            <Link href="/reawakening/city-timeline" className="text-accent">
+            <Link
+              href="/reawakening/city-timeline"
+              className="text-accent font-bold"
+            >
               City Timeline
             </Link>
           </List.Item>
           <List.Item>
             Notable Non-Player Characters can be found here -&nbsp;
-            <Link href="/reawakening/supporting-cast" className="text-accent">
+            <Link
+              href="/reawakening/supporting-cast"
+              className="text-accent font-bold"
+            >
               Supporting Cast
             </Link>
           </List.Item>
@@ -173,7 +179,7 @@ export default function CharacterCreationPage() {
           heading="Example:"
           text="Vincent Marcus Pyre is an ambitious Ventrue aristocrat who has been playing politics in Oklahoma City since his embrace in the 1930s. The son of an oil baron, he impressed his Sire with the way he managed his family fortune. He fled the city after the Night of Fires, barely escaping a hunter’s stake. Tonight, Pyre is a shadow investor, living the high life and playing the stock market through mortal proxies. Returning to the city at Prince Caldwell’s summons, Pyre is looking to land a prestigious court appointment - possibly even Seneschal."
         />
-        <Heading className="text-brand-500">
+        <Heading className="text-brand-500 font-bold">
           A note for newer Vampire players
         </Heading>
         <Text className="mb-4">
@@ -186,7 +192,7 @@ export default function CharacterCreationPage() {
           action, but this is a good starting point for building out a character
           concept!
         </Text>
-        <Heading className="text-brand-500">
+        <Heading className="text-brand-500 font-bold">
           A note for experienced Vampire players
         </Heading>
         <Text className="mb-4">
@@ -238,7 +244,7 @@ export default function CharacterCreationPage() {
               Player Characters:
             </List.Item>
             <List.Root className="pl-12">
-              <List.Item>Banu Haqim (with Storyteller approval)</List.Item>
+              <List.Item>Banu Haqim</List.Item>
               <List.Item>Brujah (as a clan outsider)</List.Item>
               <List.Item>Gangrel (as a clan outsider)</List.Item>
               <List.Item>Lasombra</List.Item>
@@ -283,6 +289,7 @@ export default function CharacterCreationPage() {
           <ExternalLink
             href="mailto:staff@cola.games"
             text="staff@cola.games"
+            className="font-lex"
           />
           , and we will enter your character into our database. Please also
           review the Chronicle Tenets, Initial XP and custom mechanics
@@ -332,6 +339,29 @@ export default function CharacterCreationPage() {
           of the rulebook to support the studio and their effort in development
           of this ruleset.
         </Text>
+        <Text className="mb-4">
+          We have also developed a Google Sheets worksheet to help you through
+          the character creation process:
+          <List.Root className="list-decimal pl-12 space-y-2">
+            <List.Item>
+              Open the worksheet here:{" "}
+              <ExternalLink
+                href="https://docs.google.com/spreadsheets/d/17qUh0iERoyCn52p4GudFR4szOBrfxth6ag0WQvrcv5g/edit?usp=sharing"
+                text="Reawakening Character Worksheet"
+              />
+            </List.Item>
+            <List.Item>
+              Use the <strong>File -{">"} Make a Copy</strong> menu to create
+              your own copy for use.
+            </List.Item>
+            <List.Item>Rename the sheet to your character name.</List.Item>
+            <List.Item>
+              When you’re done, you can use the{" "}
+              <strong>File -{">"} Download</strong> menu to create a PDF to send
+              to us.
+            </List.Item>
+          </List.Root>
+        </Text>
         <MiniBanner
           src="/images/reawakening/character-creation/elegant-woman-hotel.png"
           alt="Character Creation"
@@ -346,7 +376,7 @@ export default function CharacterCreationPage() {
             your character’s struggle between Humanity and their inner Beast -
             and their descent into becoming less human and more monster.
           </Text>
-          <List.Root className="space-y-2 list-disc pl-12 mb-4">
+          <List.Root className="space-y-2 list-disc pl-12 mb-4 font-bold marker:text-brand-500">
             <List.Item>Do not kill, except in self-defense.</List.Item>
             <List.Item>Do not harm the innocent.</List.Item>
             <List.Item>Act like a person, not a beast.</List.Item>
@@ -424,7 +454,10 @@ export default function CharacterCreationPage() {
           </List.Root>
           <Text className="mb-4">
             The full mechanics for these loresheets can be found here -{" "}
-            <Link href="/reawakening/custom-loresheets" className="text-accent">
+            <Link
+              href="/reawakening/custom-loresheets"
+              className="text-accent font-bold"
+            >
               Custom Loresheets
             </Link>
           </Text>
@@ -484,10 +517,14 @@ export default function CharacterCreationPage() {
         </Heading>
         <Text className="mb-4">
           Once you’re done, email your sheet to{" "}
-          <ExternalLink href="staff@cola.games" text="staff@cola.games" /> and
-          we’ll take a look to make sure the character is set up correctly in
-          the database. We will send you a link to your sheet online once we are
-          done.
+          <ExternalLink
+            href="staff@cola.games"
+            text="staff@cola.games"
+            className="font-bold font-lex"
+          />{" "}
+          and we’ll take a look to make sure the character is set up correctly
+          in the database. We will send you a link to your sheet online once we
+          are done.
         </Text>
         <MiniBanner
           src="/images/reawakening/character-creation/man-in-suit.png"
@@ -555,6 +592,27 @@ export default function CharacterCreationPage() {
             </List.Root>
           }
         />
+
+        <Heading>Returns & Refunds</Heading>
+        <Text className="mb-4">
+          If you’re not able to make an event after purchase, please let us know
+          by email at staff@cola.games. We will process return of an individual
+          event ticket or unused Season Pass up to 48 hours before the beginning
+          of the event following purchase.
+          <br />
+          <br />
+          <List.Root className="list-disc pl-12 space-y-2">
+            <List.Item>
+              No returns or refunds of event tickets will be processed after
+              this time.
+            </List.Item>
+            <List.Item>
+              Season Passes will not be returnable or refundable after 48 hours
+              preceding the first game post-purchase. of the event following
+              purchase.
+            </List.Item>{" "}
+          </List.Root>
+        </Text>
       </Box>
 
       {/* See you at game section */}
@@ -582,7 +640,7 @@ export default function CharacterCreationPage() {
         <List.Root className="list-disc space-y-2 pl-12">
           <List.Item>
             <Link
-              className="text-accent hover:underline"
+              className="text-accent hover:underline font-bold"
               href="/reawakening/character-advancement"
             >
               Rules for Character Advancement, Death and Retirement
@@ -591,7 +649,7 @@ export default function CharacterCreationPage() {
           <List.Item>
             <Link
               href="/reawakening/custom-mechanics"
-              className="text-accent hover:underline"
+              className="text-accent hover:underline font-bold"
             >
               Custom Mechanics & Rules Clarifications
             </Link>

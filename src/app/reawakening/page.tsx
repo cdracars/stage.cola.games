@@ -52,8 +52,10 @@ export default function ReawakeningPage() {
 
       {/* Requirements Section */}
       <Box className="page-section-alt">
-        <Heading className="section-heading">What You’ll Need</Heading>
-        <List.Root className="list-disc space-y-2">
+        <Heading className="section-heading text-shadow !text-white !font-bold text-center">
+          What You’ll Need
+        </Heading>
+        <List.Root className="list-disc space-y-2 marker:text-brand-500 pl-12">
           <List.Item>An approved character concept</List.Item>
           <List.Item>
             An approved character sheet using the v5 Laws of the Night rules

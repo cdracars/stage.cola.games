@@ -18,7 +18,7 @@ export function TimelineEvent({
     <div className="relative pl-8 pb-12 last:pb-0 text-textPrimary">
       <div className="absolute -left-4 top-0 bg-brand rounded-full h-6 w-6 border-4 border-background"></div>
       <h2 className="text-xl font-cinzel text-foreground mb-2">{title}</h2>
-      <h4 className="text-sm font-dell text-brand italic">{date}</h4>
+      <h4 className="text-md font-bold font-dell text-brand italic">{date}</h4>
       <div className="mt-4 text-base font-marcellus">{description}</div>
     </div>
   );

@@ -126,10 +126,10 @@ export default function ReawakeningChroniclePage() {
         </Text>
         <Blockquote
           text={
-            <List.Root className="list-disc list-inside space-y-2 font-marcellus">
+            <List.Root className="list-disc list-inside space-y-2 font-marcellus marker:text-brand-500">
               <List.Item>
-                <span className="text-brand-500">
-                  Sexual Assault of any kind
+                <span className="text-white font-bold">
+                  Sexual assault of any kind
                 </span>
                 <br />
                 Please be aware that some Vampires may seduce mortals to feed,
@@ -137,7 +137,7 @@ export default function ReawakeningChroniclePage() {
                 will observe a “fade to black” rule (see below).
               </List.Item>
               <List.Item>
-                <span className="text-brand-500">
+                <span className="text-white font-bold">
                   Behavior or concepts involving real-world hate movements,
                   race-based slavery or discrimination based on sex, race,
                   religion, gender identity or sexual orientation
@@ -167,7 +167,7 @@ export default function ReawakeningChroniclePage() {
         </Text>
         <Blockquote
           text={
-            <List.Root className="list-disc list-inside space-y-2 font-marcellus">
+            <List.Root className="list-disc list-inside space-y-2 font-marcellus marker:text-brand-500">
               <List.Item>Detailed description of sexual encounters</List.Item>
               <List.Item>
                 Intense scenes of violence, such as torture, excessive gore,
@@ -201,24 +201,24 @@ export default function ReawakeningChroniclePage() {
               className="list-disc list-inside space-y-4"
             >
               <List.Item>
-                <strong>No Touching Without Permission</strong> - No player
+                <strong>No touching without permission</strong> - No player
                 should engage in actual physical roleplay with another player
                 without their express consent. Simply use the out-of-character
                 gesture (crossed fingers) and ask, “Do you mind if I (action
                 here)?” Please make sure requests are respectful, and also
                 respect the player’s answer when given.
-                <br />
-                <br />
-                <span className="text-brand-500">
-                  Absolutely no overtly sexual, violent or harmful physical
-                  roleplay is allowed (actual fighting, sex acts, biting,
-                  drawing blood, etc.), <strong>even with consent</strong>
-                </span>
-                . Actions of this kind will result in immediate ejection from
-                the event.
               </List.Item>
               <List.Item>
-                <strong>No Weapons or Weapon Props</strong> - Even weapon props
+                <strong>
+                  Absolutely no overtly sexual, violent or dangerous
+                  out-of-character action is allowed (actual fighting, sex acts,
+                  biting, drawing blood, etc.),{" "}
+                  <strong>even with consent</strong> - Actions of this kind will
+                  result in immediate ejection from the event.
+                </strong>
+              </List.Item>
+              <List.Item>
+                <strong>No weapons or weapon props</strong> - Even weapon props
                 can often be mistaken for the real thing. In order to ensure our
                 players, staff and hosts all feel safe, weapons and weapon props
                 are not allowed at game.
@@ -229,12 +229,12 @@ export default function ReawakeningChroniclePage() {
                 players will be asked to leave the event.
               </List.Item>
               <List.Item>
-                <strong>No Minors</strong> - Due to the mature themes of
+                <strong>No minors</strong> - Due to the mature themes of
                 Vampire: the Masquerade, nobody under the age of 18 years will
                 be allowed at game.
               </List.Item>
               <List.Item>
-                <strong>Use the Safety Tools at game</strong> - Before the game,
+                <strong>Use the safety tools at game</strong> - Before the game,
                 our staff will explain our check-in system and any safety tools
                 in use for that game, as well as cover where out-of-character
                 decompression spaces are located. We will also print out copies
@@ -244,7 +244,8 @@ export default function ReawakeningChroniclePage() {
               <List.Item>
                 <strong>No other antisocial or disruptive behavior</strong> -
                 This is to catch any additional behavior with a negative impact
-                to the game or its players not otherwise covered here. Long
+                to the game or its players not otherwise covered here. Our game
+                staff will be the sole arbiters of inappropriate behavior. Long
                 story short, please just try to be a cool human being.
               </List.Item>
             </List.Root>

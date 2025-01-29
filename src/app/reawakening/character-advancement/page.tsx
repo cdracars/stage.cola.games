@@ -94,9 +94,9 @@ export default function CharacterAdvancementPage() {
           Sometimes, a player creates a character hoping for the best, but the
           game plays a little differently than they were expecting. We’re
           offering each player a rewrite of their character if they attend a
-          game and they like to make some modifications.
+          game and they would like to make some modifications.
         </Text>
-        <List.Root className="list-disc pl-4">
+        <List.Root className="list-disc pl-4 marker:text-brand-500">
           <List.Item>
             A character is awarded ONE full rewrite, and{" "}
             <strong className="italic">only after</strong> the Character’s{" "}

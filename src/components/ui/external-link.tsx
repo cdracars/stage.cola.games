@@ -12,12 +12,13 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({
   href,
   text,
   showIcon = true,
+  className = "",
   ...props
 }) => {
   return (
     <Link
       href={href}
-      className="text-accent hover:underline items-center"
+      className={`text-accent hover:underline items-center font-bold ${className}`}
       target="_blank"
       rel="noopener noreferrer"
       {...props}

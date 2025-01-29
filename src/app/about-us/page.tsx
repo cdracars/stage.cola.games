@@ -38,14 +38,14 @@ export default function AboutUsPage() {
             Oklahoma area.
           </Text>
           <Text className="mb-4">
-            Leveraging nearly a combined century as players and hosts of
+            Leveraging more than a combined century as players and hosts of
             live-action experiences, we aim to create immersive and engaging
             events for both experienced players and those new to the hobby.
           </Text>
           <Text className="mb-4">
             Click{" "}
             <Link
-              className="text-secondary-purple hover:underline"
+              className="text-secondary-purple underline hover:underline hover:text-primary-orange"
               href={"/reawakening"}
             >
               here
