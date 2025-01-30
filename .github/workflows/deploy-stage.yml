@@ -47,7 +47,7 @@ jobs:
 
       - name: Set Environment Variables
         run: |
-          echo "NODE_ENV='development'
+          echo "NODE_ENV='development'"
 
       - name: Build the project
         run: yarn build
