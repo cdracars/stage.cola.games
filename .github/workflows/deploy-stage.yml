@@ -53,9 +53,8 @@ jobs:
       - name: Build and Export Next.js site
         run: |
           yarn build
-          yarn export
         env:
-          NODE_ENV: "production"
+          NODE_ENV: "development"
 
       # Ensure output is properly structured for GitHub Pages
       - name: Prepare GitHub Pages output
