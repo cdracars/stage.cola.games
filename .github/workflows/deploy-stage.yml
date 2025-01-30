@@ -21,6 +21,7 @@ jobs:
       # Cache node_modules to speed up dependency installation
       - name: Cache node_modules
         uses: actions/cache@v4
+        id: node-modules-cache
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
@@ -30,6 +31,7 @@ jobs:
       # Cache the Next.js build cache
       - name: Cache Next.js build cache
         uses: actions/cache@v4
+        id: nextjs-cache
         with:
           path: .next/cache
           key: nextjs-${{ runner.os }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
@@ -43,12 +45,14 @@ jobs:
         run: corepack prepare yarn@stable --activate
 
       - name: Install dependencies
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
         run: yarn install
 
       - name: Build the project
+        if: steps.nextjs-cache.outputs.cache-hit != 'true'
         run: yarn build
         env:
-          NODE_ENV: development
+          NODE_ENV: "development"
 
       - name: Deploy to gh-pages branch
         run: |
