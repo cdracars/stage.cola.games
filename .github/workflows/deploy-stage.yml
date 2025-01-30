@@ -45,6 +45,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-nextjs-
 
+      - name: Clean up previous caches
+        run: rm -rf node_modules .next
+
       - name: Install Dependencies
         run: yarn install --immutable
 
