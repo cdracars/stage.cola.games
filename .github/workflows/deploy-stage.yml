@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Build and deploy (Static Site)
 
 on:
   push:
@@ -18,51 +18,57 @@ jobs:
         with:
           node-version: "20.x"
 
-      # Cache node_modules to speed up dependency installation
-      - name: Cache node_modules
-        uses: actions/cache@v4
-        id: node-modules-cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
-
-      # Cache the Next.js build cache
-      - name: Cache Next.js build cache
-        uses: actions/cache@v4
-        id: nextjs-cache
-        with:
-          path: .next/cache
-          key: nextjs-${{ runner.os }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
-          restore-keys: |
-            nextjs-${{ runner.os }}-
-
+      # Enable Corepack for Yarn 4+
       - name: Enable Corepack (for Yarn 4+)
         run: corepack enable
 
       - name: Set Yarn to 4.x
         run: corepack prepare yarn@stable --activate
 
+      # Cache Yarn dependencies (Yarn 4 uses ~/.yarn/cache)
+      - name: Cache Yarn dependencies
+        uses: actions/cache@v4
+        id: yarn-cache
+        with:
+          path: ~/.yarn/cache
+          key: yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            yarn-${{ runner.os }}-
+
+      # Cache Next.js build cache (for faster exports)
+      - name: Cache Next.js build cache
+        uses: actions/cache@v4
+        id: nextjs-build-cache
+        with:
+          path: .next/cache
+          key: nextjs-cache-${{ runner.os }}-${{ hashFiles('**/package.json', '**/yarn.lock', '**/next.config.js', '**/tsconfig.json') }}
+          restore-keys: |
+            nextjs-cache-${{ runner.os }}-
+
+      # Install dependencies
       - name: Install dependencies
-        if: steps.node-modules-cache.outputs.cache-hit != 'true'
-        run: yarn install
+        run: yarn install --immutable
 
-      - name: Build the project
-        if: steps.nextjs-cache.outputs.cache-hit != 'true'
-        run: yarn build
-        env:
-          NODE_ENV: "development"
-
-      - name: Deploy to gh-pages branch
+      # Build and Export the static site
+      - name: Build and Export Next.js site
         run: |
-          ls
+          yarn build
+          yarn export
+        env:
+          NODE_ENV: "production"
+
+      # Ensure output is properly structured for GitHub Pages
+      - name: Prepare GitHub Pages output
+        run: |
+          touch out/.nojekyll  # Prevent GitHub Pages from ignoring _next folder
+
+      # Deploy to gh-pages branch
+      - name: Deploy to GitHub Pages
+        run: |
           cd out
           git init
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
-          git commit -m "Stage deploy for $GITHUB_REF"
-
-          # Force push to the gh-pages branch of your production repo
+          git commit -m "Deploy static site for $GITHUB_REF"
           git push --force "https://x-access-token:${{ secrets.PRODUCTION_PAT }}@github.com/cdracars/stage.cola.games.git" HEAD:gh-pages
