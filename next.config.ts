@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.ENVIRONMENT === 'production';
+const isProd = process.env.ENVIRONMENT === 'production' ? true : false;
 
 interface WebpackConfig {
   cache: {

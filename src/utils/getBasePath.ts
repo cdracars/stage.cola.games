@@ -1,5 +1,7 @@
 export function getBasePath(): string {
-    return process.env.ENVIRONMENT !== 'production' ? "/stage.cola.games" : "";
+    const isProd = process.env.ENVIRONMENT === 'production' ? true : false;
+
+    return isProd ? "" : "/stage.cola.games"
 }
 
 export function getFullPath(path: string): string {
