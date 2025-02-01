@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.ENVIRONMENT === 'production' ? true : false;
 
 interface WebpackConfig {
   cache: {
@@ -26,8 +25,8 @@ interface NextConfig {
 
 const nextConfig: NextConfig = {
   output: "export", // Required for GitHub Pages static export
-  basePath: isProd ? "" : "/stage.cola.games",
-  assetPrefix: isProd ? "" : "/stage.cola.games/",
+  assetPrefix: "", // Required for GitHub Pages static export
+  basePath: "", // Base path for static export
   trailingSlash: true, // Ensure all routes end with a slash
   images: {
     unoptimized: true, // Disable Next.js image optimization for GitHub Pages
@@ -42,10 +41,6 @@ const nextConfig: NextConfig = {
     config.ignoreWarnings = [
       { message: /Caching failed for pack/ },
     ];
-
-    config.output.publicPath = isProd
-      ? '/_next/'
-      : '/stage.cola.games/_next/';
 
     return config;
   },
