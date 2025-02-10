@@ -4,7 +4,7 @@ interface EventCardProps {
   date: string;
   time?: string;
   location: string;
-  description?: string;
+  description?: React.ReactNode;
 }
 
 const EventCard: React.FC<EventCardProps> = ({

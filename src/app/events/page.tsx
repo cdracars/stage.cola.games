@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import EventCard from "@/components/ui/EventCard";
+import Link from "next/link";
 const events = [
   {
     title: "Pre-Chronicle Cast & Crew Connect",
@@ -15,7 +17,20 @@ const events = [
     time: "2:30 PM - 10:00 PM",
     location:
       "University of Central Oklahoma, Nigh University Center, 4th Floor",
-    description: "Tickets Available Soon",
+    description: (
+      <>
+        <p className="mb-4">Join us for Game 1 of Reawakening!</p>
+        <Link
+          href="https://central-oklahoma-live-action-games.square.site/
+"
+          passHref
+        >
+          <Button className="border border-gray-700 bg-primary-orange text-white text-lg font-semibold py-2 px-6 rounded hover:bg-brand-500 hover:text-white transition">
+            Buy Tickets
+          </Button>
+        </Link>
+      </>
+    ),
   },
   {
     title: "Reawakening: Game 2",
