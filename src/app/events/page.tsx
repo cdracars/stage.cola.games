@@ -25,7 +25,7 @@ const events = [
 "
           passHref
         >
-          <Button className="border border-gray-700 bg-primary-orange text-white text-lg font-semibold py-2 px-6 rounded hover:bg-brand-500 hover:text-white transition">
+          <Button className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
             Buy Tickets
           </Button>
         </Link>

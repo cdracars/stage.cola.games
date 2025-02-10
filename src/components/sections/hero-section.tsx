@@ -43,7 +43,7 @@ const Hero = () => {
           <Link href="/about-us" passHref>
             <Button
               variant="outline"
-              className="border border-gray-700 bg-primary-orange text-white text-lg font-semibold py-2 px-6 rounded hover:bg-brand-500 hover:text-white transition"
+              className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition"
             >
               Learn More
             </Button>
