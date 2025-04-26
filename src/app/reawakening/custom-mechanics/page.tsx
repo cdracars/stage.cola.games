@@ -23,6 +23,61 @@ export default function CharacterAdvancementPage() {
       />
       <Box className="page-section bottom-border">
         <SectionHeadingsCentered
+          section_heading='"Monthly" Timing on Effects'
+          subsection_heading="Newly Added"
+        />
+        <Text className="mb-4">
+          Due to the 2-month schedule, some timing from the core book will need
+          to be adjusted. Any effect or duration listed as “one month” now lasts
+          “one game.” Any effect or duration listed as “three months” will now
+          last “every other game” or “two games”.
+        </Text>
+      </Box>
+      <Box className="page-section bottom-border">
+        <SectionHeadingsCentered
+          section_heading="Ritual Precasts"
+          subsection_heading="Newly Added"
+        />
+        <Text className="mb-4">
+          A single downtime may be used to pre-cast up to three rituals before
+          next gathering. This is assumed to involve gathering all materials. No
+          more than one downtime action may be used in this way.
+        </Text>
+      </Box>
+      <Box className="page-section bottom-border">
+        <SectionHeadingsCentered
+          section_heading="Territory"
+          subsection_heading="Newly Added"
+        />
+        <Text className="mb-4">
+          Coteries will be granted a list of pre-defined territories by the
+          Prince. Coteries no longer gain free dots from each member, and cannot
+          raise attributes of their territory through spending experience. The
+          territories available are listed below:
+        </Text>
+        <List.Root className="list-disc pl-12 mb-4">
+          <List.Item>Adventure District</List.Item>
+          <List.Item>Capitol View</List.Item>
+          <List.Item>City Center</List.Item>
+          <List.Item>Classen-Ten-Penn</List.Item>
+          <List.Item>Edmond</List.Item>
+          <List.Item>Inner City South</List.Item>
+          <List.Item>Medical Center</List.Item>
+          <List.Item>Midwest City</List.Item>
+          <List.Item>Northwest Expressway</List.Item>
+          <List.Item>Tinker Air Force Base</List.Item>
+          <List.Item>Uptown</List.Item>
+          <List.Item>The Village & Nichols Hills</List.Item>
+          <List.Item>Will Rogers International Airport</List.Item>
+        </List.Root>
+        <Text className="mb-4">
+          Territory outside of this list may be granted by the Prince to a
+          coterie, but will be considered Comfort ●, with no Connections or
+          Deterrents.
+        </Text>
+      </Box>
+      <Box className="page-section bottom-border">
+        <SectionHeadingsCentered
           section_heading="Simple Scene Resolution"
           subsection_heading=""
         />

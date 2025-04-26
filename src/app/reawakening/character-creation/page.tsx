@@ -309,25 +309,25 @@ export default function CharacterCreationPage() {
         <List.Root className="space-y-2 mb-4 pl-12">
           <List.Item>
             <ExternalLink
-              href="https://lawsofthenight.com/srd/character-creation/"
+              href="https://srd.lawsofthenight.com/wiki/dramatic-systems/Character%20Creation"
               text="Character Creation Overview"
             />
           </List.Item>
           <List.Item>
             <ExternalLink
-              href="https://lawsofthenight.com/srd-tag/backgrounds/"
+              href="https://srd.lawsofthenight.com/wiki/dramatic-systems/Backgrounds"
               text="Backgrounds"
             />
           </List.Item>
-          <List.Item>
+          {/* <List.Item>
             <ExternalLink
               href="https://lawsofthenight.com/srd-tag/merits-and-flaws/"
               text="Merits & Flaws"
             />
-          </List.Item>
+          </List.Item> */}
           <List.Item>
             <ExternalLink
-              href="https://lawsofthenight.com/srd-tag/disciplines/"
+              href="https://srd.lawsofthenight.com/wiki/discipline"
               text="Disciplines"
             />
           </List.Item>

@@ -2,27 +2,47 @@ import { Button } from "@/components/ui/button";
 import EventCard from "@/components/ui/EventCard";
 import Link from "next/link";
 const events = [
+  //   {
+  //     title: "Pre-Chronicle Cast & Crew Connect",
+  //     date: "February 15, 2025",
+  //     time: "1:00 PM - 4:00 PM",
+  //     location:
+  //       "University of Central Oklahoma, Nigh University Center, 2nd Floor Lounge",
+  //     description:
+  //       "Come meet the crew, create your character & connect with your fellow players at this free pre-chronicle event.",
+  //   },
+  //   {
+  //     title: "Reawakening: Game 1",
+  //     date: "March 1, 2025",
+  //     time: "2:30 PM - 10:00 PM",
+  //     location:
+  //       "University of Central Oklahoma, Nigh University Center, 4th Floor",
+  //     description: (
+  //       <>
+  //         <p className="mb-4">Join us for Game 1 of Reawakening!</p>
+  //         <Link
+  //           href="https://central-oklahoma-live-action-games.square.site/
+  // "
+  //           passHref
+  //         >
+  //           <Button className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
+  //             Buy Tickets
+  //           </Button>
+  //         </Link>
+  //       </>
+  //     ),
+  //   },
   {
-    title: "Pre-Chronicle Cast & Crew Connect",
-    date: "February 15, 2025",
-    time: "1:00 PM - 4:00 PM",
-    location:
-      "University of Central Oklahoma, Nigh University Center, 2nd Floor Lounge",
-    description:
-      "Come meet the crew, create your character & connect with your fellow players at this free pre-chronicle event.",
-  },
-  {
-    title: "Reawakening: Game 1",
-    date: "March 1, 2025",
+    title: "Reawakening: Game 2",
+    date: "May 3, 2025",
     time: "2:30 PM - 10:00 PM",
     location:
       "University of Central Oklahoma, Nigh University Center, 4th Floor",
     description: (
       <>
-        <p className="mb-4">Join us for Game 1 of Reawakening!</p>
+        <p className="mb-4">Join us for Game 2 of Reawakening!</p>
         <Link
-          href="https://central-oklahoma-live-action-games.square.site/
-"
+          href="https://central-oklahoma-live-action-games.square.site/"
           passHref
         >
           <Button className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
@@ -31,13 +51,6 @@ const events = [
         </Link>
       </>
     ),
-  },
-  {
-    title: "Reawakening: Game 2",
-    date: "May 3, 2025",
-    time: "2:30 PM - 10:00 PM",
-    location:
-      "University of Central Oklahoma, Nigh University Center, 4th Floor",
   },
   {
     title: "Reawakening: Game 3",
@@ -65,7 +78,8 @@ const events = [
   {
     title: "Reawakening: Game 6",
     date: "January, 2026",
-    location: "To be Announced",
+    location:
+      "University of Central Oklahoma, Nigh University Center, Ballroom C",
   },
 ];
 
