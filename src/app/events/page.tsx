@@ -54,12 +54,6 @@ const events = [
     ),
   },
   {
-    title: "Reawakening: Game 4",
-    date: "Aug 30, 2025",
-    time: "2:30 PM - 10:00 PM",
-    location: "Will Rogers Gardens Exhibition Center",
-  },
-  {
     title: "Mid-Season Social Event",
     date: "October, 2025",
     location: "To be Announced",
