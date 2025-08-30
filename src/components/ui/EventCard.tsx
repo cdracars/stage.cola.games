@@ -4,6 +4,7 @@ interface EventCardProps {
   date: string;
   time?: string;
   location: string;
+  address?: string;
   description?: React.ReactNode;
 }
 

@@ -36,21 +36,18 @@ const events = [
     title: "Reawakening: Game 4",
     date: "Aug 30, 2025",
     time: "2:30 PM - 10:00 PM",
-    location: (
-      <>
-        Will Rogers Gardens Exhibition Center<br />
-        <span className="block text-sm mt-1">3400 NW 36th St, Oklahoma City, OK 73112</span>
-        <div className="mt-4">
-          <Link
-            href="https://central-oklahoma-live-action-games.square.site/"
-            passHref
-          >
-            <Button className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
-              Buy Tickets
-            </Button>
-          </Link>
-        </div>
-      </>
+    location: "Will Rogers Gardens Exhibition Center \n 3400 NW 36th St, Oklahoma City, OK 73112",
+    description: (
+      <div className="mt-4">
+        <Link
+          href="https://central-oklahoma-live-action-games.square.site/"
+          passHref
+        >
+          <Button className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
+            Buy Tickets
+          </Button>
+        </Link>
+      </div>
     ),
   },
   {
@@ -62,22 +59,12 @@ const events = [
     title: "Reawakening: Game 5",
     date: "November 22, 2025",
     time: "2:30 PM - 10:00 PM",
-    location: (
-      <>
-        Will Rogers Gardens Exhibition Center<br />
-        <span className="block text-sm mt-1">3400 NW 36th St, Oklahoma City, OK 73112</span>
-      </>
-    ),
+    location: "Will Rogers Gardens Exhibition Center \n 3400 NW 36th St, Oklahoma City, OK 73112",
   },
   {
     title: "Reawakening: Game 6",
     date: "January 17, 2026",
-    location: (
-      <>
-        University of Central Oklahoma, Nigh University Center, Ballroom C<br />
-        <span className="block text-sm mt-1">100 N University Dr, Edmond, OK 73034</span>
-      </>
-    ),
+    location: "University of Central Oklahoma, Nigh University Center, Ballroom C \n 100 N University Dr, Edmond, OK 73034",
   },
 ];
 
