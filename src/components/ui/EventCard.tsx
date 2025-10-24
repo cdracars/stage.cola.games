@@ -17,9 +17,9 @@ const EventCard: React.FC<EventCardProps> = ({
 }) => {
   return (
     <div className="event-card">
-      <h2 className="event-heading">{title}</h2>
-      <p className="event-text">
-        {date} {time && ` | ${time}`}
+      <h2 className="event-heading font-lucky text-primary-orange">{title}</h2>
+      <p className="event-text font-bold">
+        {date} {time && <span> | {time}</span>}
       </p>
       <p className="event-text">{location}</p>
       {description && <p className="event-description">{description}</p>}

@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import EventCard from "@/components/ui/EventCard";
-import Link from "next/link";
 const events = [
   //   {
   //     title: "Pre-Chronicle Cast & Crew Connect",
@@ -33,29 +31,6 @@ const events = [
   //     ),
   //   },
   {
-    title: "Reawakening: Game 4",
-    date: "Aug 30, 2025",
-    time: "2:30 PM - 10:00 PM",
-    location: "Will Rogers Gardens Exhibition Center \n 3400 NW 36th St, Oklahoma City, OK 73112",
-    description: (
-      <div className="mt-4">
-        <Link
-          href="https://central-oklahoma-live-action-games.square.site/"
-          passHref
-        >
-          <Button className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
-            Buy Tickets
-          </Button>
-        </Link>
-      </div>
-    ),
-  },
-  {
-    title: "Mid-Season Social Event",
-    date: "October, 2025",
-    location: "To be Announced",
-  },
-  {
     title: "Reawakening: Game 5",
     date: "November 22, 2025",
     time: "2:30 PM - 10:00 PM",
@@ -64,14 +39,39 @@ const events = [
   {
     title: "Reawakening: Game 6",
     date: "January 17, 2026",
+    time: "2:30 PM - 10:00 PM",
     location: "University of Central Oklahoma, Nigh University Center, Ballroom C \n 100 N University Dr, Edmond, OK 73034",
+  },
+  {
+    title: "A Crown of Storms: Stillwater",
+    date: "March 28, 2026",
+    time: "9:30 AM - 4:00 PM",
+    location: "Stillwater Public Library\n1107 S Duck St, Stillwater, OK 74074",
+  },
+  {
+    title: "A Crown of Storms: Tulsa",
+    date: "April 11, 2026",
+    time: "2:30 PM - 10:00 PM",
+    location: "Clare Michael Event Space\n2314 E Admiral Blvd, Tulsa, OK 74110",
+  },
+  {
+    title: "A Crown of Storms: Oklahoma City",
+    date: "April 25, 2026",
+    time: "4:00 PM - 11:30 PM",
+    location: "Memorial Park Cemetery Historic Chapel\n13400 N Kelley Ave, Oklahoma City, OK 73131",
+  },
+  {
+    title: "A Crown of Storms: Finale",
+    date: "May 16, 2026",
+    time: "12:30 PM - 10:00 PM",
+    location: "The Ivy Event Space\n10604 N Sheridan Rd, Sperry, OK 74073",
   },
 ];
 
 export default function EventsPage() {
   return (
     <div className="bg-secondary-blue text-white  font-lex p-8">
-      <h1 className="text-4xl text-center text-primary-orange mb-8">
+      <h1 className="text-4xl text-center text-primary-orange mb-8 font-lucky">
         Event Schedule
       </h1>
       <div className="space-y-8">
