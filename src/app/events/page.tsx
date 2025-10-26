@@ -35,6 +35,19 @@ const events = [
     date: "November 22, 2025",
     time: "2:30 PM - 10:00 PM",
     location: "Will Rogers Gardens Exhibition Center \n 3400 NW 36th St, Oklahoma City, OK 73112",
+    description: (
+      <div className="mt-4">
+        <a
+          href="https://central-oklahoma-live-action-games.square.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="border border-gray-700 bg-primary-orange hover:bg-brand-300 text-white text-lg font-semibold py-2 px-6 rounded transition">
+            Buy Tickets
+          </button>
+        </a>
+      </div>
+    ),
   },
   {
     title: "Reawakening: Game 6",
