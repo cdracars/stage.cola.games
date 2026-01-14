@@ -3,7 +3,7 @@ interface EventCardProps {
   title: string;
   date: string;
   time?: string;
-  location: string;
+  location: React.ReactNode;
   address?: string;
   description?: React.ReactNode;
 }
@@ -21,8 +21,8 @@ const EventCard: React.FC<EventCardProps> = ({
       <p className="event-text font-bold">
         {date} {time && <span> | {time}</span>}
       </p>
-      <p className="event-text">{location}</p>
-      {description && <p className="event-description">{description}</p>}
+      <div className="event-text">{location}</div>
+      {description && <div className="event-description">{description}</div>}
     </div>
   );
 };

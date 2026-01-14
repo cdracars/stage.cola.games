@@ -31,10 +31,16 @@ const events = [
   //     ),
   //   },
   {
-    title: "Reawakening: Game 5",
-    date: "November 22, 2025",
+    title: "Reawakening: Game 6",
+    date: "January 17, 2026",
     time: "2:30 PM - 10:00 PM",
-    location: "Will Rogers Gardens Exhibition Center \n 3400 NW 36th St, Oklahoma City, OK 73112",
+    location: (
+      <div className="leading-tight">
+        <span className="font-bold text-primary-orange">New Location!</span>{" "}
+        The Hilton Skirvin Hotel, Floor 14 - One Park Ave, Oklahoma City, OK
+        73102
+      </div>
+    ),
     description: (
       <div className="mt-4">
         <a
@@ -48,12 +54,6 @@ const events = [
         </a>
       </div>
     ),
-  },
-  {
-    title: "Reawakening: Game 6",
-    date: "January 17, 2026",
-    time: "2:30 PM - 10:00 PM",
-    location: "University of Central Oklahoma, Nigh University Center, Ballroom C \n 100 N University Dr, Edmond, OK 73034",
   },
   {
     title: "A Crown of Storms: Stillwater",
