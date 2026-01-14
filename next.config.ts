@@ -20,6 +20,7 @@ interface NextConfig {
   images: {
     unoptimized: boolean;
   };
+  turbopack: Record<string, never>;
   webpack: (config: WebpackConfig) => WebpackConfig;
 }
 
@@ -31,6 +32,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable Next.js image optimization for GitHub Pages
   },
+  turbopack: {}, // Silence Next 16 Turbopack + webpack config warning
   webpack: (config) => {
     // Enable filesystem caching with absolute cache location
     config.cache = {
@@ -47,4 +49,3 @@ const nextConfig: NextConfig = {
 };
 
 module.exports = nextConfig;
-
