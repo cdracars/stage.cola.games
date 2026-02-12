@@ -61,7 +61,9 @@ const MainContent: React.FC<{ children: ReactNode }> = ({ children }) => {
   const pathname = usePathname();
 
   // Check if the current path starts with "/reawakening"
-  const isReawakeningPath = pathname.startsWith("/reawakening");
+  const isReawakeningPath =
+    pathname.startsWith("/reawakening") ||
+    pathname.startsWith("/a-crown-of-storms");
 
   // Define conditional classes based on URL
   const mainClasses = `flex-grow container mx-auto px-6 py-12 ${

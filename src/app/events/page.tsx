@@ -1,4 +1,25 @@
 import EventCard from "@/components/ui/EventCard";
+import {
+  Della_Respira,
+  Overlock_SC,
+  Uncial_Antiqua,
+} from "next/font/google";
+
+const dellaRespira = Della_Respira({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const overlockSC = Overlock_SC({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const uncialAntiqua = Uncial_Antiqua({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 const events = [
   //   {
   //     title: "Pre-Chronicle Cast & Crew Connect",
@@ -83,10 +104,27 @@ const events = [
 
 export default function EventsPage() {
   return (
-    <div className="bg-secondary-blue text-white  font-lex p-8">
-      <h1 className="text-4xl text-center text-primary-orange mb-8 font-lucky">
+    <div
+      className="min-h-screen p-8"
+      style={{ backgroundColor: "#1e1432", color: "#ffffff" }}
+    >
+      <h1
+        className={`${uncialAntiqua.className} text-center mb-4`}
+        style={{ fontSize: "23px", color: "#f1c232" }}
+      >
         Event Schedule
       </h1>
+
+      <div className="text-center mb-10">
+        <a
+          href="/a-crown-of-storms"
+          className={`${overlockSC.className} underline`}
+          style={{ color: "#e69138", fontSize: "16px" }}
+        >
+          Learn about A Crown of Storms
+        </a>
+      </div>
+
       <div className="space-y-8">
         {events.map((event, index) => (
           <EventCard key={index} {...event} />
