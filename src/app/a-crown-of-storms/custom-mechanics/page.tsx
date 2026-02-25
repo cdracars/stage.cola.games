@@ -1,10 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Della_Respira,
-  Overlock_SC,
-  Uncial_Antiqua,
-} from "next/font/google";
+import { Della_Respira, Overlock_SC, Uncial_Antiqua } from "next/font/google";
 
 const dellaRespira = Della_Respira({
   subsets: ["latin"],
@@ -22,6 +18,10 @@ const uncialAntiqua = Uncial_Antiqua({
 });
 
 export default function ACrownOfStormsCustomMechanicsPage() {
+  const BODY_SIZE = "18px";
+  const SUBTITLE_SIZE = "26px";
+  const TITLE_SIZE = "36px";
+
   return (
     <div
       className="min-h-screen w-full"
@@ -39,7 +39,7 @@ export default function ACrownOfStormsCustomMechanicsPage() {
           />
           <h1
             className={`${uncialAntiqua.className}`}
-            style={{ fontSize: "23px", color: "#f1c232" }}
+            style={{ fontSize: TITLE_SIZE, color: "#f1c232" }}
           >
             Treasures &amp; Curios
           </h1>
@@ -47,12 +47,12 @@ export default function ACrownOfStormsCustomMechanicsPage() {
 
         <section
           className={`${dellaRespira.className} space-y-8 leading-relaxed`}
-          style={{ fontSize: "11px" }}
+          style={{ fontSize: BODY_SIZE }}
         >
-          <div className="space-y-3 text-center">
+          <div className="space-y-3 text-left">
             <h2
-              className={`${overlockSC.className}`}
-              style={{ fontSize: "16px", color: "#f1c232" }}
+              className={`${overlockSC.className} text-center`}
+              style={{ fontSize: SUBTITLE_SIZE, color: "#f1c232" }}
             >
               Character Creation
             </h2>
@@ -69,10 +69,10 @@ export default function ACrownOfStormsCustomMechanicsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 text-center">
+          <div className="space-y-4 text-left">
             <h2
-              className={`${overlockSC.className}`}
-              style={{ fontSize: "16px", color: "#f1c232" }}
+              className={`${overlockSC.className} text-center`}
+              style={{ fontSize: SUBTITLE_SIZE, color: "#f1c232" }}
             >
               Treasures &amp; Curios in Play
             </h2>
@@ -86,7 +86,7 @@ export default function ACrownOfStormsCustomMechanicsPage() {
 
             <div className="flex justify-center">
               <Image
-                src="/images/CRoS/CrownCoin.png"
+                src="/images/CRoS/265%20-%20Bassline.jpg"
                 alt="Example Treasure card"
                 width={500}
                 height={700}
@@ -116,10 +116,10 @@ export default function ACrownOfStormsCustomMechanicsPage() {
             </p>
           </div>
 
-          <div className="space-y-3 text-center">
+          <div className="space-y-3 text-left">
             <h2
-              className={`${overlockSC.className}`}
-              style={{ fontSize: "16px", color: "#f1c232" }}
+              className={`${overlockSC.className} text-center`}
+              style={{ fontSize: SUBTITLE_SIZE, color: "#f1c232" }}
             >
               Acquiring Treasures
             </h2>
@@ -147,12 +147,12 @@ export default function ACrownOfStormsCustomMechanicsPage() {
 
         <section
           className={`${dellaRespira.className} space-y-8 leading-relaxed`}
-          style={{ fontSize: "11px" }}
+          style={{ fontSize: BODY_SIZE }}
         >
-          <div className="space-y-3 text-center">
+          <div className="space-y-3 text-left">
             <h2
-              className={`${overlockSC.className}`}
-              style={{ fontSize: "16px", color: "#f1c232" }}
+              className={`${overlockSC.className} text-center`}
+              style={{ fontSize: SUBTITLE_SIZE, color: "#f1c232" }}
             >
               Equipment
             </h2>
@@ -176,10 +176,10 @@ export default function ACrownOfStormsCustomMechanicsPage() {
             </p>
           </div>
 
-          <div className="space-y-3 text-center">
+          <div className="space-y-3 text-left">
             <h2
-              className={`${overlockSC.className}`}
-              style={{ fontSize: "16px", color: "#f1c232" }}
+              className={`${overlockSC.className} text-center`}
+              style={{ fontSize: SUBTITLE_SIZE, color: "#f1c232" }}
             >
               Character Death &amp; Retirement
             </h2>
@@ -200,32 +200,31 @@ export default function ACrownOfStormsCustomMechanicsPage() {
         <section className="text-center space-y-3">
           <p
             className={`${overlockSC.className}`}
-            style={{ fontSize: "16px", color: "#f1c232" }}
+            style={{ fontSize: SUBTITLE_SIZE, color: "#f1c232" }}
           >
             Keep building your story
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/a-crown-of-storms/character-creation"
-              className="inline-block px-6 py-3 rounded font-semibold shadow-md transition"
-              style={{
-                backgroundColor: "#e69138",
-                color: "#1e1432",
-                fontSize: "11px",
-              }}
+              href="/a-crown-of-storms/chronicle-setting"
+              className="font-semibold underline"
+              style={{ color: "#e69138", fontSize: BODY_SIZE }}
             >
-              Character Creation
+              Chronicle Setting
             </Link>
             <Link
-              href="/events"
-              className="inline-block px-6 py-3 rounded font-semibold border"
-              style={{
-                borderColor: "#f1c232",
-                color: "#f1c232",
-                fontSize: "11px",
-              }}
+              href="/a-crown-of-storms/custom-mechanics"
+              className="font-semibold underline"
+              style={{ color: "#e69138", fontSize: BODY_SIZE }}
             >
-              View Events / Tickets
+              Custom Mechanics
+            </Link>
+            <Link
+              href="/a-crown-of-storms/character-creation"
+              className="font-semibold underline"
+              style={{ color: "#e69138", fontSize: BODY_SIZE }}
+            >
+              Character Creation
             </Link>
           </div>
         </section>

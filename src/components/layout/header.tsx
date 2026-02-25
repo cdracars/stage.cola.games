@@ -17,18 +17,23 @@ const Header = () => {
   const { open, onToggle } = useDisclosure();
   const pathname = usePathname();
 
-  // Check if the current path starts with "/reawakening"
   const isReawakeningPath = pathname.startsWith("/reawakening");
-  const classes = `${
-    isReawakeningPath
-      ? "bg-gray-700 text-gray-100 bottom-border"
-      : "bg-primary-blue text-white"
-  }`;
-  const font = isReawakeningPath ? "font-della" : "font-lucky";
+  const isAcosPath = pathname.startsWith("/a-crown-of-storms");
+  const classes = isReawakeningPath
+    ? "bg-gray-700 text-gray-100 bottom-border"
+    : isAcosPath
+    ? "text-gray-100 bottom-border"
+    : "bg-primary-blue text-white";
+  const style = isAcosPath
+    ? { backgroundColor: "#1e1432", borderColor: "#f1c232" }
+    : undefined;
+  const font = isReawakeningPath || isAcosPath ? "font-della" : "font-lucky";
   const hover = isReawakeningPath
     ? "hover:text-brand-500"
+    : isAcosPath
+    ? "hover:text-[#f1c232]"
     : "hover:text-primary-orange";
-  const vamp = isReawakeningPath ? "vamp" : "candy";
+  const vamp = isReawakeningPath || isAcosPath ? "vamp" : "candy";
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -39,7 +44,7 @@ const Header = () => {
   ];
 
   return (
-    <Box className={`${classes} px-4 ${font} shadow-md`}>
+    <Box className={`${classes} px-4 ${font} shadow-md`} style={style}>
       <Flex className="h-16 items-center justify-between max-w-screen-xl mx-auto">
         {/* Logo */}
         <Link href="/" className="w-100">

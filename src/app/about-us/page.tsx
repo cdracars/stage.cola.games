@@ -46,13 +46,13 @@ export default function AboutUsPage() {
             Click{" "}
             <Link
               className="text-secondary-purple underline hover:underline hover:text-primary-orange"
-              href={"/reawakening"}
+              href={"/a-crown-of-storms"}
             >
               here
             </Link>{" "}
-            to explore our upcoming premier Vampire: The Masquerade event{" "}
-            <span className="text-primary-orange">Reawakening</span>, and stay
-            tuned for further events in the central Oklahoma area.
+            to explore our upcoming Changeling: The Dreaming mini-chronicle,{" "}
+            <span className="text-primary-orange">A Crown of Storms</span>, and
+            stay tuned for further events in the Oklahoma area.
           </Text>
         </Box>
         <Box className="page-section !font-lex">
@@ -115,7 +115,7 @@ export default function AboutUsPage() {
               imageAlt="Man in Suit Sitting"
               description={
                 <>
-                  Other games, like our upcoming event, Reawakening, use
+                  Other games, like our upcoming event, A Crown of Storms, use
                   abstracted systems like dice or rock, paper, scissors. These
                   games are more socially focused and typically take place in
                   indoor spaces.
@@ -175,12 +175,12 @@ export default function AboutUsPage() {
             />
           </Link>
           <Link
-            href="/reawakening"
+            href="/a-crown-of-storms"
             className="pb-8 block group transition-transform duration-300 hover:scale-105 hover:rotate-1"
           >
             <MiniBanner
-              src="/images/about-us/reawakeining-logo.png"
-              alt="Reawakening A Vampire The Masquerade Live-Action Experience"
+              src="/images/CRoS/ACoSTitle.jpg"
+              alt="A Crown of Storms"
             />
           </Link>
         </Box>

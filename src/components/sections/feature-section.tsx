@@ -31,18 +31,17 @@ const features = [
     link: "https://discord.gg/5p59HPmtYH",
   },
   {
-    title: "Reawakening",
+    title: "A Crown of Storms",
     description: (
       <>
         <Text>
-          Step into the world of Vampire: The Masquerade with our flagship
-          event,
-          <strong> Reawakening</strong>.
+          Get lost in the world of Changeling: The Dreaming with our upcoming
+          mini-chronicle, <strong>A Crown of Storms</strong>.
         </Text>
       </>
     ),
-    image: "/images/home/reawakening-splash-square.jpeg",
-    link: "/reawakening",
+    image: "/images/CRoS/ACoSSquare.jpg",
+    link: "/a-crown-of-storms",
   },
 ];
 

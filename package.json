@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://cdracars.github.io/stage.cola.games/",
+  "engines": {
+    "node": ">=20.9.0 <21"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
