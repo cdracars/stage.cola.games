@@ -264,6 +264,13 @@ export default function ACrownOfStormsCharacterCreationPage() {
         <hr className="border-t border-gray-700" />
 
         <section className="space-y-4">
+          <Image
+            src="/images/CRoS/Step%204.png"
+            alt="Step 4 - Build Your Character"
+            width={1200}
+            height={700}
+            className="w-full max-w-3xl rounded-md shadow-lg mx-auto"
+          />
           <div
             className={`${dellaRespira.className} space-y-3 leading-relaxed text-left`}
             style={{ fontSize: BODY_SIZE }}
@@ -292,7 +299,7 @@ export default function ACrownOfStormsCharacterCreationPage() {
             </p>
             <p className="font-semibold">
               <a
-                href="https://docs.google.com/document/"
+                href="https://docs.google.com/document/d/1-Pvk_-qg-G1fDzpoFPbKIyAnWqTvPlxz8yYoxVFL6ic/edit?usp=sharing"
                 className="text-[#e69138] underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -332,12 +339,14 @@ export default function ACrownOfStormsCharacterCreationPage() {
               against the tyranny of the wicked Shadow Court.
             </p>
             <p>
-              Act I: Local freehold games across central Oklahoma, each with its own
-              story, characters, and conflicts.
+              <span style={{ color: "#f1c232" }}>Act I</span>: Local freehold
+              games across central Oklahoma, each with its own story, characters,
+              and conflicts.
             </p>
             <p>
-              Act II: A grand combined event where all Freeholds gather and the
-              kingdom&apos;s fate is decided.
+              <span style={{ color: "#f1c232" }}>Act II</span>: A grand combined
+              event where all Freeholds gather and the kingdom&apos;s fate is
+              decided.
             </p>
             <p>
               While designed as a two-game event, you may attend as many or as few
@@ -367,7 +376,9 @@ export default function ACrownOfStormsCharacterCreationPage() {
             className={`${dellaRespira.className} space-y-2 leading-relaxed text-left`}
             style={{ fontSize: BODY_SIZE }}
           >
-            <p className="font-semibold">Act I - The Duchies of Storms</p>
+            <p className="font-semibold" style={{ color: "#f1c232" }}>
+              Act I - The Duchies of Storms
+            </p>
             <ul className="list-disc list-inside space-y-1">
               <li>
                 The Princess of Stillwater - March 28th, 9:30 AM - 4:00 PM,
@@ -383,7 +394,9 @@ export default function ACrownOfStormsCharacterCreationPage() {
                 Memorial Park Cemetery Historic Chapel, Oklahoma City. $20
               </li>
             </ul>
-            <p className="font-semibold mt-2">Act II - Finale</p>
+            <p className="font-semibold mt-2" style={{ color: "#f1c232" }}>
+              Act II - Finale
+            </p>
             <ul className="list-disc list-inside space-y-1">
               <li>
                 The Shadow Queen of Oklahoma - May 16th, 12:30 PM - 10:00 PM, The

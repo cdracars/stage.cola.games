@@ -115,7 +115,7 @@ body {
 }
 
 .event-card {
-  @apply border border-gray-300 rounded-lg p-6 w-full max-w-2xl mx-auto bg-primary-blue;
+  @apply border border-gray-300 rounded-lg p-6 w-full max-w-2xl mx-auto bg-primary-blue text-white;
 }
 
 .event-heading {

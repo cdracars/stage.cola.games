@@ -254,6 +254,15 @@ export default function ACrownOfStormsGettingStartedPage() {
               - keep the space welcoming for everyone.
             </li>
           </ul>
+          <div className="flex justify-center pt-2">
+            <Link
+              href="/a-crown-of-storms/character-creation"
+              className={`${overlockSC.className} inline-block font-semibold px-6 py-3 rounded-md`}
+              style={{ backgroundColor: "#e69138", color: "#ffffff", fontSize: BODY_SIZE }}
+            >
+              Next Step: Character Creation
+            </Link>
+          </div>
         </section>
 
         <hr className="border-gray-600" />

@@ -6,6 +6,8 @@ interface EventCardProps {
   location: React.ReactNode;
   address?: string;
   description?: React.ReactNode;
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -14,6 +16,8 @@ const EventCard: React.FC<EventCardProps> = ({
   time,
   location,
   description,
+  ctaLabel,
+  ctaHref,
 }) => {
   return (
     <div className="event-card">
@@ -23,6 +27,18 @@ const EventCard: React.FC<EventCardProps> = ({
       </p>
       <div className="event-text">{location}</div>
       {description && <div className="event-description">{description}</div>}
+      {ctaLabel && ctaHref && (
+        <div className="text-center mt-4">
+          <a
+            href={ctaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary-orange text-white font-semibold px-5 py-2 rounded-md hover:opacity-90 transition-opacity"
+          >
+            {ctaLabel}
+          </a>
+        </div>
+      )}
     </div>
   );
 };
