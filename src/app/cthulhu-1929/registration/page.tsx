@@ -103,9 +103,6 @@ export default function Cthulhu1929RegistrationPage() {
         <Box className="rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-6">
           <CthulhuSectionTitle>Step 3: Buy your Ticket</CthulhuSectionTitle>
           <CthulhuBody className="mt-4">
-            <CthulhuTextLink href={ticketUrl} external>
-              COLA Games Online Store
-            </CthulhuTextLink>
             <Text>Your ticket is $125 and includes:</Text>
             <ul className="list-disc space-y-2 pl-6">
               <li>Admission to the event</li>
@@ -116,7 +113,9 @@ export default function Cthulhu1929RegistrationPage() {
               </li>
               <li>A catered, in-character dinner</li>
             </ul>
-            <Text>This event will be limited to 35 participants.</Text>
+            <Text className="font-bold text-white">
+              This event will be limited to 35 participants.
+            </Text>
             <Box className="pt-2">
               <CthulhuActionLink href={ticketUrl} external>
                 Buy Your Ticket
@@ -133,9 +132,6 @@ export default function Cthulhu1929RegistrationPage() {
               friends, and tell us which characters you&apos;re most interested in
               portraying:
             </Text>
-            <CthulhuTextLink href={registrationUrl} external>
-              Registration: The Inheritance of Ambrose Wincrest
-            </CthulhuTextLink>
             <Box className="pt-2">
               <CthulhuActionLink href={registrationUrl} external>
                 Register Now

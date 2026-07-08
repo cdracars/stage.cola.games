@@ -15,9 +15,10 @@ export default function Cthulhu1929GettingStartedPage() {
         { label: "Cthulhu 1929", href: "/cthulhu-1929" },
         { label: "Getting Started", href: "#" },
       ]}
-      title="Getting Started"
-      heroSrc="/images/cthulhu1929/Chronicle Content.jpg"
-      heroAlt="Chronicle content overview"
+      title=""
+      heroSrc="/images/cthulhu1929/Getting Started.jpg"
+      heroAlt="Getting started overview"
+      heroClassName="mx-auto max-w-4xl"
     >
       <CthulhuBody className="mx-auto max-w-4xl text-center">
         <Text>
@@ -68,15 +69,19 @@ export default function Cthulhu1929GettingStartedPage() {
               </Text>
               <ul className="list-disc space-y-3 pl-6 marker:text-[#f6b26b]">
                 <li>
-                  Sexual Assault of any kind
+                  <Text as="span" className="font-bold text-[#f6b26b]">
+                    Sexual Assault of any kind
+                  </Text>
                   <br />
                   Romantic activity must always be consensual and will observe a
                   &quot;fade to black&quot; rule (see below).
                 </li>
                 <li>
-                  Behavior or content involving real-world hate movements,
-                  race-based slavery or discrimination based on sex, race,
-                  religion, gender identity or sexual orientation
+                  <Text as="span" className="font-bold text-[#f6b26b]">
+                    Behavior or content involving real-world hate movements,
+                    race-based slavery or discrimination based on sex, race,
+                    religion, gender identity or sexual orientation
+                  </Text>
                   <br />
                   We understand that 1929 America had to grapple with these
                   subjects, but they will not be a focus of our game. All
@@ -110,7 +115,7 @@ export default function Cthulhu1929GettingStartedPage() {
         </Box>
 
         <Box className="space-y-8">
-          <Box className="overflow-hidden rounded-2xl bg-white/5 p-3">
+          <Box className="overflow-hidden rounded-2xl bg-black">
             <Image
               src="/images/cthulhu1929/SafetyRules.jpg"
               alt="Safety rules"
@@ -119,8 +124,7 @@ export default function Cthulhu1929GettingStartedPage() {
           </Box>
 
           <Box className="rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-6">
-            <CthulhuSectionTitle>Safety Rules</CthulhuSectionTitle>
-            <CthulhuBody className="mt-4">
+            <CthulhuBody>
               <Text>
                 To help us provide an immersive and safe experience for
                 everyone, please observe the following rules:

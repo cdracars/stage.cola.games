@@ -4,10 +4,11 @@ import Image from "@/components/overrides/image";
 
 interface CthulhuPageShellProps {
   routes: { label: string; href?: string }[];
-  title: string;
+  title?: string;
   flavor?: React.ReactNode;
   heroSrc: string;
   heroAlt: string;
+  heroClassName?: string;
   children: React.ReactNode;
 }
 
@@ -28,12 +29,23 @@ export function CthulhuPageShell({
   flavor,
   heroSrc,
   heroAlt,
+  heroClassName = "",
   children,
 }: CthulhuPageShellProps) {
   return (
     <Box className="bg-black text-[#b6d7a8]">
       <Box className="mx-auto max-w-5xl px-6 py-8 md:px-10 md:py-10">
-        <Box className="overflow-hidden rounded-2xl bg-white/5 shadow-[0_0_40px_rgba(0,0,0,0.45)]">
+        <Box className="mx-auto mb-8 max-w-5xl overflow-hidden rounded-2xl bg-black">
+          <Image
+            src="/images/cthulhu1929/Inheritance.jpg"
+            alt="The Inheritance of Ambrose Wincrest"
+            className="h-auto w-full object-cover"
+          />
+        </Box>
+
+        <Box
+          className={`overflow-hidden rounded-2xl bg-white/5 shadow-[0_0_40px_rgba(0,0,0,0.45)] ${heroClassName}`}
+        >
           <Image
             src={heroSrc}
             alt={heroAlt}
@@ -49,9 +61,11 @@ export function CthulhuPageShell({
           </Box>
         ) : null}
 
-        <Heading className="mt-10 text-center font-norican text-[28px] font-normal leading-[1.2] text-white md:text-[28px]">
-          {title}
-        </Heading>
+        {title ? (
+          <Heading className="mt-10 text-center font-norican text-[28px] font-normal leading-[1.2] text-white md:text-[28px]">
+            {title}
+          </Heading>
+        ) : null}
 
         <Box className="mt-8 space-y-8">{children}</Box>
       </Box>

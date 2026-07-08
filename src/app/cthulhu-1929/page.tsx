@@ -7,6 +7,12 @@ export default function Cthulhu1929SplashPage() {
     <Box className="bg-black text-[#b6d7a8]">
       <Box className="mx-auto max-w-4xl px-6 py-8 md:px-10 md:py-10">
         <Image
+          src="/images/cthulhu1929/Inheritance.jpg"
+          alt="The Inheritance of Ambrose Wincrest"
+          className="mb-8 h-auto w-full object-cover"
+        />
+
+        <Image
           src="/images/cthulhu1929/Welcome 1929.jpg"
           alt="Welcome to Cthulhu 1929"
           className="mb-8 h-auto w-full object-cover"
@@ -66,7 +72,10 @@ export default function Cthulhu1929SplashPage() {
         </Text>
 
         <Box className="mt-4 space-y-6 font-josefin text-[19px] leading-[1.55] text-[#b6d7a8]">
-          <Box as="ul" className="space-y-1 pl-6">
+          <Box
+            as="ul"
+            className="list-disc space-y-1 pl-6 text-[#b6d7a8] marker:text-[#fff2cc]"
+          >
             <Text as="li">
               A fully-developed character, complete with skills, goals and
               relationships
