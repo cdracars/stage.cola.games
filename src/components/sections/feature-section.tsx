@@ -31,16 +31,16 @@ const features = [
     link: "https://discord.gg/5p59HPmtYH",
   },
   {
-    title: "A Crown of Storms",
+    title: "Cthulhu Live: The Inheritance of Ambrose Wincrest",
     description: (
       <>
         <Text>
-          Get lost in the world of Changeling: The Dreaming with our upcoming
-          mini-chronicle, <strong>A Crown of Storms</strong>.
+          Immerse yourself in a Lovecraftian 1929 New England in our upcoming
+          Noir Horror event, <strong>The Inheritance of Ambrose Wincrest</strong>.
         </Text>
       </>
     ),
-    image: "/images/CRoS/ACoSSquare.jpg",
+    image: "/images/cthulhu1929/Inheritace Square.jpg",
     link: "/a-crown-of-storms",
   },
 ];
