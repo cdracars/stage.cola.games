@@ -45,7 +45,10 @@ export default function Cthulhu1929SplashPage() {
             horror writings of H.P. Lovecraft.
           </Text>
 
-          <Box as="ul" className="list-disc space-y-4 pl-6">
+          <Box
+            as="ul"
+            className="list-disc space-y-4 pl-8 text-[#b6d7a8] marker:text-[#fff2cc]"
+          >
             <Text as="li">
               Inhabit a character and step into a world of secret societies,
               forbidden knowledge, and things that should not exist.
@@ -74,7 +77,7 @@ export default function Cthulhu1929SplashPage() {
         <Box className="mt-4 space-y-6 font-josefin text-[19px] leading-[1.55] text-[#b6d7a8]">
           <Box
             as="ul"
-            className="list-disc space-y-1 pl-6 text-[#b6d7a8] marker:text-[#fff2cc]"
+            className="list-disc space-y-1 pl-8 text-[#b6d7a8] marker:text-[#fff2cc]"
           >
             <Text as="li">
               A fully-developed character, complete with skills, goals and

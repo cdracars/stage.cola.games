@@ -21,9 +21,22 @@ documented tag-based deploy flow.
 - Prefer consistency with the existing repository over introducing new patterns
 - Make the smallest reasonable change that fully solves the problem
 - Optimize for readability, maintainability, correctness, and reviewability
+- Favor DRY and SRP, but do not abstract prematurely
+- Preserve security and safe defaults in code, content handling, and deployment changes
+- Follow established best practices for the stack unless repo constraints require otherwise
 - Preserve static-export compatibility
 - Treat content edits, shared UI edits, and deployment changes as different risk levels
 - Avoid unnecessary dependencies, abstractions, and broad rewrites
+
+## Engineering Discipline
+
+- Prefer TDD when practical for behavior-changing work, especially for utilities, logic, and regressions
+- When adding or updating tests, structure them clearly using Arrange, Act, Assert
+- Keep functions, components, and modules focused on a single responsibility
+- Eliminate duplication when it improves maintainability, but avoid speculative abstractions
+- Treat maintainability as a first-class requirement alongside correctness and delivery speed
+- Apply security-minded thinking by default: validate assumptions, avoid unsafe patterns, and minimize accidental exposure of secrets or privileged behavior
+- Use best-practice implementations that fit the repository's actual constraints instead of blindly following generic patterns
 
 ## Intent Verification
 
