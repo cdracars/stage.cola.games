@@ -41,7 +41,7 @@ const features = [
       </>
     ),
     image: "/images/cthulhu1929/Inheritace Square.jpg",
-    link: "/a-crown-of-storms",
+    link: "/cthulhu-1929",
   },
 ];
 

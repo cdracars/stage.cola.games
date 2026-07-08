@@ -3,13 +3,16 @@
 import { ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import {
+  Beth_Ellen,
   Della_Respira,
   IM_Fell_English_SC,
+  Josefin_Sans,
   Marcellus_SC,
   La_Belle_Aurore,
   Cinzel_Decorative,
   Luckiest_Guy,
   Lexend,
+  Norican,
 } from "next/font/google";
 import { Provider } from "../ui/provider";
 import Header from "./header";
@@ -39,6 +42,12 @@ const laBelleAurore = La_Belle_Aurore({
   weight: "400",
 });
 
+const bethEllen = Beth_Ellen({
+  subsets: ["latin"],
+  variable: "--font-beth-ellen",
+  weight: "400",
+});
+
 const cinzelDecorative = Cinzel_Decorative({
   subsets: ["latin"],
   variable: "--font-cinzel-decorative",
@@ -57,28 +66,41 @@ const lexend = Lexend({
   weight: "400",
 });
 
+const josefinSans = Josefin_Sans({
+  subsets: ["latin"],
+  variable: "--font-josefin-sans",
+  weight: ["400", "700"],
+});
+
+const norican = Norican({
+  subsets: ["latin"],
+  variable: "--font-norican",
+  weight: "400",
+});
+
 const MainContent: React.FC<{ children: ReactNode }> = ({ children }) => {
   const pathname = usePathname();
 
-  // Check if the current path starts with "/reawakening"
-  const isReawakeningPath =
-    pathname.startsWith("/reawakening") ||
-    pathname.startsWith("/a-crown-of-storms");
+  const isReawakeningPath = pathname.startsWith("/reawakening");
+  const isAcosPath = pathname.startsWith("/a-crown-of-storms");
+  const isCthulhuPath = pathname.startsWith("/cthulhu-1929");
+  const isDarkChroniclePath = isReawakeningPath || isAcosPath;
 
-  // Define conditional classes based on URL
-  const mainClasses = `flex-grow container mx-auto px-6 py-12 ${
-    isReawakeningPath ? "bg-gray-800 text-gray-100" : "bg-white text-gray-800"
-  }`;
+  const mainClasses = isDarkChroniclePath
+    ? "container mx-auto px-6 py-12 bg-gray-800 text-gray-100"
+    : isCthulhuPath
+    ? "bg-black text-[#b6d7a8]"
+    : "container mx-auto px-6 py-12 bg-white text-gray-800";
 
-  const bodyClasses = `${
-    isReawakeningPath
-      ? "bg-gray-800 text-gray-100"
-      : "bg-white text-gray-800 font-lex"
-  }`;
+  const bodyClasses = isDarkChroniclePath
+    ? "bg-gray-800 text-gray-100"
+    : isCthulhuPath
+    ? "bg-black text-[#b6d7a8] font-josefin"
+    : "bg-white text-gray-800 font-lex";
 
   return (
     <body
-      className={`${bodyClasses} ${luckiestGuy.variable} ${lexend.variable} ${dellaRespira.variable} ${imFellEnglishSC.variable} ${marcellusSC.variable} ${laBelleAurore.variable} ${cinzelDecorative.variable} antialiased flex flex-col min-h-screen`}
+      className={`${bodyClasses} ${luckiestGuy.variable} ${lexend.variable} ${dellaRespira.variable} ${imFellEnglishSC.variable} ${marcellusSC.variable} ${laBelleAurore.variable} ${cinzelDecorative.variable} ${bethEllen.variable} ${josefinSans.variable} ${norican.variable} antialiased flex flex-col min-h-screen`}
     >
       <Provider>
         {/* Header */}

@@ -19,26 +19,37 @@ const Header = () => {
 
   const isReawakeningPath = pathname.startsWith("/reawakening");
   const isAcosPath = pathname.startsWith("/a-crown-of-storms");
+  const isCthulhuPath = pathname.startsWith("/cthulhu-1929");
   const classes = isReawakeningPath
     ? "bg-gray-700 text-gray-100 bottom-border"
     : isAcosPath
     ? "text-gray-100 bottom-border"
+    : isCthulhuPath
+    ? "bg-black text-white bottom-border"
     : "bg-primary-blue text-white";
   const style = isAcosPath
     ? { backgroundColor: "#1e1432", borderColor: "#f1c232" }
+    : isCthulhuPath
+    ? { borderColor: "#76a5af" }
     : undefined;
-  const font = isReawakeningPath || isAcosPath ? "font-della" : "font-lucky";
+  const font = isReawakeningPath || isAcosPath
+    ? "font-della"
+    : isCthulhuPath
+    ? "font-josefin"
+    : "font-lucky";
   const hover = isReawakeningPath
     ? "hover:text-brand-500"
     : isAcosPath
     ? "hover:text-[#f1c232]"
+    : isCthulhuPath
+    ? "hover:text-[#76a5af]"
     : "hover:text-primary-orange";
-  const vamp = isReawakeningPath || isAcosPath ? "vamp" : "candy";
+  const vamp = isReawakeningPath || isAcosPath || isCthulhuPath ? "vamp" : "candy";
 
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
-    { name: "A Crown of Storms", href: "/a-crown-of-storms" },
+    { name: "Cthulhu 1929", href: "/cthulhu-1929" },
     { name: "Events", href: "/events" },
   ];
 

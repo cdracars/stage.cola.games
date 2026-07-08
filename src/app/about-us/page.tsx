@@ -1,27 +1,12 @@
-import { StaticBreadcrumbs } from "@/components/ui/breadcrumbs";
 import CalloutCard from "@/components/ui/callout-card";
 import MiniBanner from "@/components/ui/mini-banner";
 import { Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import Image from "@/components/overrides/image";
 
 export default function AboutUsPage() {
   return (
     <>
       <Box className="bg-secondary-blue text-black page-section">
-        <Box className="bottom-border">
-          <Image
-            src="/images/logos/COLA_Logo_box_candy.svg"
-            alt="COLA Games Logo"
-            className="block mx-auto w-[350px] h-auto object-contain mb-4"
-          />
-        </Box>
-        <StaticBreadcrumbs
-          routes={[
-            { label: "Home", href: "/" },
-            { label: "About Us", href: "#" },
-          ]}
-        />
         <Box className="page-section !font-lex !pb-0">
           {/* Hero Section */}
           <MiniBanner
@@ -46,13 +31,15 @@ export default function AboutUsPage() {
             Click{" "}
             <Link
               className="text-secondary-purple underline hover:underline hover:text-primary-orange"
-              href={"/a-crown-of-storms"}
+              href="/cthulhu-1929"
             >
               here
             </Link>{" "}
-            to explore our upcoming Changeling: The Dreaming mini-chronicle,{" "}
-            <span className="text-primary-orange">A Crown of Storms</span>, and
-            stay tuned for further events in the Oklahoma area.
+            to explore our upcoming Call of Cthulhu live-action experience,{" "}
+            <span className="text-primary-orange">
+              The Inheritance of Ambrose Wincrest
+            </span>
+            , and stay tune for further events in the Oklahoma area.
           </Text>
         </Box>
         <Box className="page-section !font-lex">
@@ -115,7 +102,7 @@ export default function AboutUsPage() {
               imageAlt="Man in Suit Sitting"
               description={
                 <>
-                  Other games, like our upcoming event, A Crown of Storms, use
+                  Other games, like our upcoming Cthulhu noir event, use
                   abstracted systems like dice or rock, paper, scissors. These
                   games are more socially focused and typically take place in
                   indoor spaces.
@@ -175,12 +162,12 @@ export default function AboutUsPage() {
             />
           </Link>
           <Link
-            href="/a-crown-of-storms"
+            href="/cthulhu-1929"
             className="pb-8 block group transition-transform duration-300 hover:scale-105 hover:rotate-1"
           >
             <MiniBanner
-              src="/images/CRoS/ACoSTitle.jpg"
-              alt="A Crown of Storms"
+              src="/images/cthulhu1929/Inheritance.jpg"
+              alt="The Inheritance of Ambrose Wincrest"
             />
           </Link>
         </Box>

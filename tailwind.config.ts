@@ -52,12 +52,15 @@ module.exports = {
       },
       fontFamily: {
         belle: ['"La Belle Aurore"', "cursive"],
+        beth: ['"Beth Ellen"', "cursive"],
         della: ["'Della Respira'", "serif"],
         fell: ["'IM Fell English SC'", "serif"],
+        josefin: ["'Josefin Sans'", "sans-serif"],
         marcellus: ["'Marcellus SC'", "serif"],
         cinzel: ["'Cinzel Decorative'", "serif"],
         lucky: ["'Luckiest Guy'", "cursive"],
         lex: ["'Lexend'", "sans-serif"],
+        norican: ["'Norican'", "cursive"],
       },
       backgroundImage: {
         "gradient-header": "linear-gradient(to right, #85200c, #d3563f)",

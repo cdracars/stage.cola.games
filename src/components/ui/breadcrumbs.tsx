@@ -17,23 +17,32 @@ export const StaticBreadcrumbs: React.FC<StaticBreadcrumbsProps> = ({
 }) => {
   const pathname = usePathname();
 
-  // Check if the current path starts with "/reawakening"
   const isReawakeningPath = pathname.startsWith("/reawakening");
+  const isCthulhuPath = pathname.startsWith("/cthulhu-1929");
 
-  // Define conditional classes based on URL
-  const font = isReawakeningPath ? "font-della" : "font-lex";
-  const color = isReawakeningPath ? "text-brand-500" : "text-primary-orange";
+  const font = isReawakeningPath
+    ? "font-della"
+    : isCthulhuPath
+    ? "font-josefin"
+    : "font-lex";
+  const color = isReawakeningPath
+    ? "text-brand-500"
+    : isCthulhuPath
+    ? "text-[#76a5af]"
+    : "text-primary-orange";
+  const currentColor = isCthulhuPath ? "text-[#fff2cc] opacity-70" : "text-gray-500";
+  const separatorColor = isCthulhuPath ? "text-[#f6b26b]" : "text-gray-500";
   return (
     <BreadcrumbRoot
       className={`!pl-8 !pt-4 font-bold ${font}`}
-      separator={<Box className="text-gray-500"> / </Box>}
+      separator={<Box className={separatorColor}> / </Box>}
     >
       {routes.map((crumb, index) => {
         const isLast = index === routes.length - 1;
 
         if (isLast) {
           return (
-            <BreadcrumbCurrentLink key={index} className="text-gray-500">
+            <BreadcrumbCurrentLink key={index} className={currentColor}>
               {crumb.label}
             </BreadcrumbCurrentLink>
           );
