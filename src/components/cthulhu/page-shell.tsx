@@ -33,7 +33,7 @@ export function CthulhuPageShell({
   return (
     <Box className="bg-black text-[#b6d7a8]">
       <Box className="mx-auto max-w-5xl px-6 py-8 md:px-10 md:py-10">
-        <Box className="overflow-hidden rounded-2xl border border-[#76a5af]/40 bg-white/5 shadow-[0_0_40px_rgba(0,0,0,0.45)]">
+        <Box className="overflow-hidden rounded-2xl bg-white/5 shadow-[0_0_40px_rgba(0,0,0,0.45)]">
           <Image
             src={heroSrc}
             alt={heroAlt}
@@ -93,7 +93,7 @@ export function CthulhuActionLink({
   external = false,
 }: CthulhuActionLinkProps) {
   const className =
-    "inline-flex items-center justify-center rounded-full border border-[#76a5af] bg-[#76a5af]/10 px-6 py-3 font-josefin text-[19px] font-bold uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#76a5af] hover:text-black";
+    "inline-flex items-center justify-center rounded-full border border-[#f6b26b] bg-[#f6b26b]/10 px-6 py-3 font-josefin text-[19px] font-bold uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#f6b26b] hover:text-black";
 
   if (external) {
     return (
@@ -121,7 +121,7 @@ export function CthulhuTextLink({
   external = false,
 }: CthulhuTextLinkProps) {
   const className =
-    "font-josefin text-[19px] text-[#76a5af] underline underline-offset-4 transition-colors duration-200 hover:text-white";
+    "font-josefin text-[19px] text-[#f6b26b] underline underline-offset-4 transition-colors duration-200 hover:text-white";
 
   if (external) {
     return (

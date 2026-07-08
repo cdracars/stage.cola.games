@@ -56,7 +56,7 @@ export default function Cthulhu1929GettingStartedPage() {
             </CthulhuBody>
           </Box>
 
-          <Box className="rounded-2xl border border-[#76a5af]/40 bg-white/5 p-6">
+          <Box className="rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-6">
             <CthulhuSectionTitle>Chronicle Lines</CthulhuSectionTitle>
             <CthulhuBody className="mt-4">
               <Text>
@@ -66,7 +66,7 @@ export default function Cthulhu1929GettingStartedPage() {
                 </Text>
                 , and will not be explored in-game.
               </Text>
-              <ul className="list-disc space-y-3 pl-6">
+              <ul className="list-disc space-y-3 pl-6 marker:text-[#f6b26b]">
                 <li>
                   Sexual Assault of any kind
                   <br />
@@ -98,7 +98,7 @@ export default function Cthulhu1929GettingStartedPage() {
                 </Text>
                 :
               </Text>
-              <ul className="list-disc space-y-2 pl-6">
+              <ul className="list-disc space-y-2 pl-6 marker:text-[#f6b26b]">
                 <li>Description of sexual encounters</li>
                 <li>
                   Other overly intense or graphic content as determined by the
@@ -110,29 +110,12 @@ export default function Cthulhu1929GettingStartedPage() {
         </Box>
 
         <Box className="space-y-8">
-          <Box className="overflow-hidden rounded-2xl border border-[#76a5af]/40 bg-white/5 p-3">
+          <Box className="overflow-hidden rounded-2xl bg-white/5 p-3">
             <Image
               src="/images/cthulhu1929/SafetyRules.jpg"
               alt="Safety rules"
-              className="h-auto w-full rounded-xl object-cover"
+              className="h-auto w-full object-cover"
             />
-          </Box>
-
-          <Box className="rounded-2xl border border-[#76a5af]/40 bg-white/5 p-6">
-            <CthulhuSectionTitle>Your Fellow Players</CthulhuSectionTitle>
-            <CthulhuBody className="mt-4">
-              <Text>
-                Live-action roleplay contains a social element that may bring
-                player characters into fictional conflict with one another.
-                Please always remember that your fellow players aren&apos;t your
-                enemy, even if your characters have different goals.
-              </Text>
-              <Text>
-                Take advantage of time before, during, and after the game to
-                introduce yourself and let your fellow players know you&apos;re
-                not rivals, even if your characters are.
-              </Text>
-            </CthulhuBody>
           </Box>
 
           <Box className="rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-6">
@@ -142,7 +125,7 @@ export default function Cthulhu1929GettingStartedPage() {
                 To help us provide an immersive and safe experience for
                 everyone, please observe the following rules:
               </Text>
-              <ol className="list-decimal space-y-3 pl-6">
+              <ol className="list-decimal space-y-3 pl-6 marker:text-[#f6b26b]">
                 <li>No Touching Without Permission</li>
                 <li>No Dangerous, Violent or Sexual Physical Roleplay</li>
                 <li>No Weapons or Weapon Props</li>
@@ -159,10 +142,27 @@ export default function Cthulhu1929GettingStartedPage() {
               </Text>
             </CthulhuBody>
           </Box>
+
+          <Box className="rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-6">
+            <CthulhuSectionTitle>Your Fellow Players</CthulhuSectionTitle>
+            <CthulhuBody className="mt-4">
+              <Text>
+                Live-action roleplay contains a social element that may bring
+                player characters into fictional conflict with one another.
+                Please always remember that your fellow players aren&apos;t your
+                enemy, even if your characters have different goals.
+              </Text>
+              <Text>
+                Take advantage of time before, during, and after the game to
+                introduce yourself and let your fellow players know you&apos;re
+                not rivals, even if your characters are.
+              </Text>
+            </CthulhuBody>
+          </Box>
         </Box>
       </Box>
 
-      <Box className="mx-auto max-w-4xl rounded-2xl border border-[#76a5af]/40 bg-white/5 p-8 text-center">
+      <Box className="mx-auto max-w-4xl rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-8 text-center">
         <CthulhuBody className="space-y-4">
           <Text>
             All set? Great! You can secure your tickets and register for the

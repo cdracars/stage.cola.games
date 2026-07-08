@@ -39,7 +39,7 @@ export default function Cthulhu1929SplashPage() {
             horror writings of H.P. Lovecraft.
           </Text>
 
-          <Box as="ul" className="space-y-4 pl-6">
+          <Box as="ul" className="list-disc space-y-4 pl-6">
             <Text as="li">
               Inhabit a character and step into a world of secret societies,
               forbidden knowledge, and things that should not exist.
@@ -61,7 +61,7 @@ export default function Cthulhu1929SplashPage() {
           </Text>
         </Box>
 
-        <Text className="mt-14 font-beth text-[24px] text-white">
+        <Text className="mt-14 font-norican text-[28px] text-white">
           Your Evening Includes:
         </Text>
 

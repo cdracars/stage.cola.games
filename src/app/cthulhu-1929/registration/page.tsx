@@ -52,7 +52,7 @@ export default function Cthulhu1929RegistrationPage() {
       </CthulhuBody>
 
       <Box className="grid gap-8">
-        <Box className="rounded-2xl border border-[#76a5af]/40 bg-white/5 p-6">
+        <Box className="rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-6">
           <CthulhuSectionTitle>
             Step 1: Join the Cola Games Discord Server
           </CthulhuSectionTitle>
@@ -100,7 +100,7 @@ export default function Cthulhu1929RegistrationPage() {
           </CthulhuBody>
         </Box>
 
-        <Box className="rounded-2xl border border-[#76a5af]/40 bg-white/5 p-6">
+        <Box className="rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-6">
           <CthulhuSectionTitle>Step 3: Buy your Ticket</CthulhuSectionTitle>
           <CthulhuBody className="mt-4">
             <CthulhuTextLink href={ticketUrl} external>
@@ -149,7 +149,7 @@ export default function Cthulhu1929RegistrationPage() {
           </CthulhuBody>
         </Box>
 
-        <Box className="rounded-2xl border border-[#76a5af]/40 bg-white/5 p-6">
+        <Box className="rounded-2xl border border-[#f6b26b]/40 bg-white/5 p-6">
           <CthulhuSectionTitle>Step 5: See you at game!</CthulhuSectionTitle>
           <CthulhuBody className="mt-4">
             <Text>
@@ -170,7 +170,7 @@ export default function Cthulhu1929RegistrationPage() {
               <br />
               Edmond, Oklahoma 73034
             </Text>
-            <Text className="font-beth text-2xl text-white">
+            <Text className="font-norican text-[28px] text-white">
               Cthulhu fhtagn!
             </Text>
           </CthulhuBody>
