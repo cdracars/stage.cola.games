@@ -8,8 +8,11 @@ Apply these as defaults and guardrails, not rigid rules.
 More specific instruction files may override this.
 
 This repository is the staging website for COLA Games. It is a content-heavy
-Next.js app that publishes club information, event pages, and chronicle support
-material for live-action roleplaying experiences.
+Next.js application that publishes club information, event pages, and chronicle
+support material for live-action roleplaying experiences.
+
+This repo is also the source that promotes content to production via the
+documented tag-based deploy flow.
 
 ---
 
@@ -19,7 +22,7 @@ material for live-action roleplaying experiences.
 - Make the smallest reasonable change that fully solves the problem
 - Optimize for readability, maintainability, correctness, and reviewability
 - Preserve static-export compatibility
-- Treat content changes, route changes, and shared UI changes as different risk levels
+- Treat content edits, shared UI edits, and deployment changes as different risk levels
 - Avoid unnecessary dependencies, abstractions, and broad rewrites
 
 ## Intent Verification
@@ -36,17 +39,19 @@ Before implementing, verify that the requested change actually solves the stated
 
 ## Repository Role
 
-This repository is an application site, not a general-purpose component library.
+This repository is an application site, not a general-purpose framework or component library.
 
 Current priorities:
 
 - keep the COLA staging site stable and easy to update
 - support chronicle-specific content without breaking shared site behavior
-- preserve static export to GitHub Pages
+- preserve static export to GitHub Pages-style hosting
 - keep homepage, event pages, and support pages easy to edit
-- favor predictable content publishing over experimental architecture changes
+- keep the stage-to-production promotion path reliable and documented
 
-Treat this repo as a focused frontend application with shared components, route-owned content, and static hosting constraints.
+Treat this repo as a focused frontend application with shared components,
+route-owned content, static hosting constraints, and a documented production
+promotion workflow.
 
 ---
 
@@ -76,30 +81,36 @@ Favor solving today's problem with the smallest maintainable change.
 
 Prefer the Windows-side clone for active work:
 
-- `C:\Users\cdrac\code\javascript\stage.cola.games`
+- `C:\Users\cdrac\code\Javascript\stage.cola.games`
 
-Use the WSL-backed copy only when WSL integration is healthy. If edits are made through a remote connector because local filesystem access is degraded, pull those commits into the Windows clone before continuing local work.
+Reference repo examples may exist elsewhere on disk, but changes for this site
+should land here unless explicitly requested otherwise.
+
+If work is copied in from WSL or another local clone, verify filenames, asset
+paths, and links after the transfer.
 
 ---
 
 ## Expected Stack Behavior
 
 - Runtime: Node 20.x
+- Package manager: Yarn 4
 - Framework: Next.js 16 App Router
 - Language: TypeScript
 - UI: Chakra UI with Tailwind utility classes
 - Animation: Framer Motion
-- Hosting model: static export for GitHub Pages
-
-The repository currently contains both `yarn.lock` and `package-lock.json`. The declared package manager is Yarn 4, but lockfile state is mixed. Do not casually switch package managers or churn lockfiles as part of unrelated work.
+- Hosting model: static export
 
 Common commands:
 
-- `npm run dev`
-- `npm run build`
-- `npm run lint`
+- `yarn install`
+- `yarn dev`
+- `yarn build`
+- `npx tsc --noEmit`
 
-If you use a different package manager for a specific reason, explain why.
+This repository has had mixed package-manager state before. The declared
+package manager is Yarn 4. Do not casually introduce npm lockfiles or churn
+lockfiles as part of unrelated work.
 
 ---
 
@@ -110,15 +121,19 @@ Keep the current repository shape unless a change is explicitly requested:
 - `src/app/page.tsx`: homepage route entry
 - `src/app/about-us/page.tsx`: club information page
 - `src/app/events/page.tsx`: events landing page
+- `src/app/cthulhu-1929/...`: Cthulhu 1929 route set
 - `src/app/reawakening/...`: Reawakening chronicle pages
-- `src/app/a-crown-of-storms/...`: A Crown of Storms chronicle pages
+- `src/app/a-crown-of-storms/...`: archived A Crown of Storms chronicle pages
 - `src/components/layout/`: header, footer, and page layout helpers
 - `src/components/sections/`: homepage and route-level reusable sections
 - `src/components/ui/`: shared presentational building blocks
-- `src/components/overrides/`: framework-specific wrappers such as image and link behavior
+- `src/components/cthulhu/`: shared Cthulhu-specific page helpers
+- `src/components/overrides/`: wrappers for image and link behavior
 - `src/utils/getBasePath.ts`: path helper for static-hosting-safe references
 - `src/styles/globals.css`: global styles
 - `public/images/`: static art and content images
+- `public/docs/`: downloadable public documents
+- `.github/workflows/deploy-prod.yml`: production deployment workflow
 
 Do not reorganize the layout unless explicitly requested.
 
@@ -148,10 +163,12 @@ In particular:
 - Homepage feature-card content belongs in `src/components/sections/feature-section.tsx`
 - Chronicle content should remain within the matching `src/app/...` subtree
 - Put static assets under `public/images/...` whenever practical
-- Reference assets with site-root-relative paths such as `/images/cthulhu1929/Inheritace Square.jpg`
+- Put downloadable documents under `public/docs/...`
+- Reference assets with site-root-relative paths such as `/images/cthulhu1929/Inheritance.jpg`
 - Match asset filenames exactly, including spaces, case, and existing misspellings
 - Do not rename assets casually unless all references are updated and verified
 - Be careful changing event titles and links because homepage cards and route trees can diverge
+- Treat copy from approved Google Docs or provided source documents as locked unless told otherwise
 
 ---
 
@@ -164,7 +181,7 @@ Important constraints:
 - `output: "export"`
 - `trailingSlash: true`
 - `images.unoptimized: true`
-- custom webpack cache configuration is present to suppress cache-related issues
+- custom webpack cache configuration is present
 
 When changing routing, links, assets, or image usage:
 
@@ -183,6 +200,12 @@ When changing routing, links, assets, or image usage:
 - Keep accessibility in mind for headings, buttons, links, and image alt text
 - Avoid introducing unnecessary motion or complexity into content pages
 
+For chronicle pages in particular:
+
+- follow provided style guides literally when one exists
+- do not improvise extra navigation panes or duplicate header areas
+- do not rewrite locked copy for brevity or tone without approval
+
 ---
 
 ## Testing Expectations
@@ -190,12 +213,13 @@ When changing routing, links, assets, or image usage:
 - Add or update validation for meaningful behavior changes when practical
 - Prefer running the smallest relevant checks first
 - For content-only edits, confirm the edited route renders cleanly
-- For structural or shared UI edits, run lint and build when possible
+- For structural or shared UI edits, run type-check and build when possible
+- For deploy workflow changes, read the workflow and verify the documentation matches it
 
 Preferred local commands:
 
-- `npm run lint`
-- `npm run build`
+- `npx tsc --noEmit`
+- `yarn build`
 
 If a command cannot be run, say so clearly.
 
@@ -203,21 +227,40 @@ If a command cannot be run, say so clearly.
 
 ## Documentation Expectations
 
-- Keep `README.md` accurate if setup or workflow changes materially
+- Keep `README.md` accurate if setup, deploy, or workflow behavior changes materially
 - Keep `AGENTS.md` aligned with actual repo workflow and constraints
-- Document any new environment, deployment, or content-editing expectations when they become part of normal work
+- Keep stage-to-production instructions concrete and operational
+- Document new content-editing or deployment expectations when they become part of normal work
 
 Prefer concise, operationally useful documentation.
 
 ---
 
-## Git and Operations
+## Deployment and Operations
 
-- The remote default branch is `main`
+- Default branch: `main`
+- Production deploy is tag-driven, not merge-driven
+- Production deploy workflow lives in `.github/workflows/deploy-prod.yml`
+- Production deploy pushes generated static output to `cdracars/cola.games` branch `gh-pages`
+- Production workflow depends on `PRODUCTION_PAT`
+
+When changing deploy behavior:
+
+- update the workflow
+- update `README.md`
+- make sure the documented process still matches reality
+
+Do not change deploy semantics casually during content or UI work.
+
+---
+
+## Git Guidance
+
 - Do not rewrite history for routine content or UI edits
-- Pull remote connector changes into the Windows clone before further local work
-- Be careful with lockfile churn and generated output
-- Avoid committing unrelated formatting-only changes during focused content tasks
+- Avoid bundling lockfile churn into unrelated site/content commits
+- Keep commits focused by concern where practical
+- Be explicit if a push requires rebase due to remote movement
+- Preserve unrelated local changes unless the user explicitly asks otherwise
 
 ---
 
@@ -230,8 +273,8 @@ When reviewing or modifying code, pay particular attention to:
 - asset path correctness
 - consistency between homepage cards and destination pages
 - shared UI regressions
-- unnecessary structural churn
-- documentation accuracy
+- typography and style-guide fidelity on chronicle pages
+- deployment documentation accuracy
 
 Flag:
 
@@ -239,4 +282,5 @@ Flag:
 - asset-path mismatches
 - route changes without matching navigation updates
 - unnecessary package-manager churn
+- duplicate page-level header chrome
 - large UI rewrites for narrow content requests
